@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Student Manager</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				var count = 0;
+				var arr = [];
+
+				$('#studentsection').hide();
+
+
+				//menu function
+				$('#studentmn').click(function(){
+					$('#studentsection').show();
+					$('#homesection').hide();
+				});	
+
+
+				$('#homemn').click(function(){
+					$('#studentsection').hide();
+					$('#homesection').show();
+				});
+				//menu function
+
+
+		
+
+
+
+
+				// add new student funtcion
+				$('#newstudent').click(function(){
+					$('#addspan').html(
+						 '<tr id="inputtable">'
+
+						+ '<th>'
+							+ '&nbsp;'
+						+ '</th>'
+
+						+ '<th>'
+							+ '<input id="name" required type="text" size="12">'
+						+ '</th>'
+
+						+ '<th>'
+							+ '<input id="birthday" required  type="date" >'
+						+ '</th>'
+
+						+ '<th>'
+							+ '<input id="address" required type="text">'
+						+ '</th>'
+
+						+ '<th>'
+							+ '<input id="class" required type="text" size="8">'
+						+ '</th>'
+
+						+ '<th>'
+							+ '<input id="phone" required pattern="[0-9]*" type="text" size="8">'
+						+ '</th>'
+
+						+ '<th>'
+							+ '&nbsp;'
+						+ '</th>'
+
+						+ '<th>'
+							+ '&nbsp;'
+						+ '</th>'
+
+						+ '</tr>'
+
+						+ '<tr id="inputbutton">'
+						
+						+'<th>'
+							+ '&nbsp;'
+						+ '</th>'
+						
+						+ '<th>'
+							+ '<button  style="outline: none" type="submit" class="btn btn-success" >Submit</button>'
+				
+							+ '<button  style="outline:none;margin-left:5px" class="btn btn-danger" id="closeadd">Close</button>'	
+						+ '</th>'
+
+
+						+'<th>'
+							+ '&nbsp;'
+						+ '</th>'
+
+						+'<th>'
+							+ '&nbsp;'
+						+ '</th>'
+
+						+'<th>'
+							+ '&nbsp;'
+						+ '</th>'
+
+						+'<th>'
+							+ '&nbsp;'
+						+ '</th>'
+
+						+'<th>'
+							+ '&nbsp;'
+						+ '</th>'
+
+						+'<th>'
+							+ '&nbsp;'
+						+ '</th>'
+						
+						+ '</tr>'
+					);
+				
+
+					$('#closeadd').click(function(e){
+						e.preventDefault();
+						$('#inputtable').hide();
+						$('#inputbutton').hide();
+
+					});
+
+				});
+				// add new student funtcion
+
+
+
+				//validate and print student infors
+				$('#inputinfor').submit(function(){
+					count += 1;
+					$('#studentinfor').append(
+						'<tr>'
+							+ '<th>'
+								+ count
+							+ '</th>'
+
+							+ '<th>'
+								+ $('#name').val()
+							+ '</th>'
+
+							+ '<th>'
+								+ $('#birthday').val()
+							+ '</th>'
+
+							+ '<th>'
+								+ $('#address').val()
+							+ '</th>'
+
+							+ '<th>'
+								+ $('#class').val()
+							+ '</th>'
+
+							+ '<th>'
+								+ $('#phone').val()
+							+ '</th>'
+
+							+ '<th id="editcon">'
+								+ '<a href="#" class="edit"><span class="glyphicon glyphicon-pencil" style="color:#5cb85c;margin-right:10px"></span></a>'
+							+ '</th>'
+
+							+ '<th>'
+								+ '<a href="#" class="delete"><span class="glyphicon glyphicon-remove" style="color:#d9534f;"></span></a>'
+							+ '</th>'
+
+						+ '</tr>'
+					);
+						//create an object
+						var obj = {
+							"no":count,
+							"ten":$('#name').val(),
+							"ngaysinh":$('#birthday').val(),
+							"diachi":$('#address').val(),
+							"lop":$('#class').val(),
+							"sdt":$('#phone').val(),
+
+						};
+						//create an object
+
+						arr[arr.length] = obj;
+
+						$('#name').val("");
+						$('#birthday').val("");
+						$('#address').val("");
+						$('#class').val("");
+						$('#phone').val("");
+						$('#name').focus();
+
+
+						//delete infors 
+						$('table').on('click', '.delete', function(){
+							$(this).closest('tr').remove();
+		
+						});
+						//delete infors 
+
+				});
+				//validate and print student infors
+
+
+
+					//sort
+					$('#sort').click(function(){
+						for(a = 0 ; a < arr.length ; a++) {
+								
+								arr[a].no = a;
+							}
+
+					});
+
+					//sort
+
+
+
+		
+				$('#addsearch').click(function(){
+					$('#searchspan').html(
+						'<div id="searchtable"  style="margin-bottom: 10px">'
+							+ '<input id="searchbar" type="text" style="border-radius:8px;outline:none">'
+							+ '<button id="closesearch" class="btn btn-danger" type="button" style="outline:none; margin-left:5px">Close</button>'
+						+ '</div>'
+					);
+					$('#searchbar').on("keyup", function(){
+						$("#tb tr").filter(function(){
+							$(this).toggle($(this).text().indexOf($('#searchbar').val()) > -1) 
+										
+						});
+					});
+
+			//	$('#searchfunction').click(function(){
+					//		for( i = 0 ; i < arr.length ; i++) {
+							//	if( arr[i].ten.indexOf($('#searchbar').val()) != -1 ) {
+								//	$("#tb tr").filter(function(){
+							//			$(this).toggle($(this).text().indexOf($('#searchbar').val()) > -1) 
+								//		
+							//		});
+						//		}		
+						//	}
+				//	});
+
+					$('#closesearch').click(function(){
+						$('#searchtable').hide();
+					});
+				
+
+				});
+
+				$('#logout').click(function(){
+					alert('Log Out Success');
+				});
+
+
+
+
+
+
+
+
+			});
+			
+
+
+		</script>
+
+		<style type="text/css">
+			
+
+
+			.navbar {
+				border-radius: 0;	
+				font-size: 15px;
+				margin:0;
+			}
+
+			#headerlogo {
+				color: white;
+				font-size: 30px
+			
+			}
+
+			#headerlogo2 {
+				color: #efab2f;
+				font-size: 30px
+			}
+
+			.nav.navbar-nav.navbar-right {
+				padding: 0;
+				margin:0;
+			}
+
+			footer {
+     			background-color: #555;
+      			color: white;
+      			padding: 15px;
+    		}
+
+
+		</style>
+
+	</head>
+	
+
+	<body>
+		<!--Header-->
+		<div class="navbar navbar-inverse ">
+			 <div class="container-fluid">
+				<div class="navbar-header">
+					<a  class="navbar-brand" id="headerlogo"><span id="headerlogo2">Student</span> Manager</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right" >
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> <span id="popup" title="For Admin Only" class="glyphicon glyphicon-question-sign"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;Admin<span class="caret"></span></a>
+    					<ul class="dropdown-menu">
+      						<li><a href="#" data-toggle="modal" data-target="#Modal">Log In</a></li>
+    						<li><a href="#" id="logout">Log Out</a></li>
+    					</ul>
+  					</li>
+				</ul>
+				
+
+				<!-- popup/modal -->
+  				<div class="modal fade" id="Modal" role="dialog">
+   				 	<div class="modal-dialog">
+    
+      				<!-- popup/modal content-->
+      					<div class="modal-content">
+       					 	<div class="modal-header">
+          						<button type="button" class="close" data-dismiss="modal">&times;</button>
+          						<h4 class="modal-title">Admin Page</h4>
+          						<h5 class="modal-title">For Admin Only</h5>
+        					</div>
+					        <div class="modal-body">
+						        <form action="/action_page.php">
+								    <div class="form-group">
+								      	<label for="email">Email:</label>
+								      	<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+								    </div>
+
+								    <div class="form-group">
+								      	<label for="pwd">Password:</label>
+								      	<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+								    </div>
+								    
+								    <div class="checkbox">
+								      	<label><input type="checkbox" name="remember"> Remember me</label>
+								    	</div>
+								    <button type="submit" class="btn btn-default">Submit</button>
+ 								</form>
+					        </div>
+	        				
+	        				<div class="modal-footer">
+	          					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        				</div>
+      					</div>
+      				<!-- popup/modal content-->
+
+    				</div>
+  				</div>
+				<!-- popup/modal -->
+
+
+
+			</div>
+		</div>
+		<!--Header-->
+
+
+
+	<!-- website body -->	
+	<div class="container-fluid"> <!-- thẻ bao body -->
+
+			<div class="row content"><!-- thẻ row-->
+	
+
+				<!-- Menu -->
+				<div class="col-sm-3 sidenav" style="margin-top:16px">
+					<div class="list-group" >
+	    				<a href="#home" id="homemn" class="list-group-item"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a>
+	    				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-certificate"></span>&nbsp;&nbsp;Teacher & administrators</a>
+	    				<a href="#student" id="studentmn" class="list-group-item"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Students</a>
+	    				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Calendar</a>
+	    				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-tasks"></span>&nbsp;&nbsp;Library</a>
+	    				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;Family & Invoices</a>
+	    				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-stats"></span>&nbsp;&nbsp;Expenses & OtherIncome</a>
+	    				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Mileage</a>
+	    				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;Website</a>
+	    				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Posts</a>
+	    				<a href="#" class="list-group-item"><span class="glyphicon glyphicon-duplicate"></span>&nbsp;&nbsp;Report Center</a>
+	  				</div>
+			 	<!--Banner-->
+			 		<fieldset class="container-fuild" style="background-color: #A5DF4E;padding:40px 30px 40px 30px;margin-bottom: 20px">
+			 			<div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.1); border-radius: 8px">
+			 				<div class="container-fuild" style="margin:auto;width:80%; text-align: center;padding: 20px 0">
+			 					<legend class="glyphicon glyphicon-chevron-up" style="color:#f4a033;"> </legend>
+                    			<h3 style="color: white">Get In Touch To Find Our More About Out Our Product</h3>
+                    			<button type="button" class="btn btn-success" style="font-size:18px;outline:none">Contact Us</button>
+			 				</div>
+			 			</div>
+			 		</fieldset>
+
+			 		<fieldset class="container-fuild" style="background-color: #A5DF4E;padding:40px 30px 40px 30px;">
+			 			<div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.1); border-radius: 8px">
+			 				<div class="container-fuild" style="margin:auto;width:80%; text-align: center;padding: 20px 0">
+			 					<legend class="glyphicon glyphicon-chevron-up" style="color:#f4a033;"> </legend>
+                    			<h3 style="color: white">Get In Touch To Find Our More About Out Our Product</h3>
+                    			<button type="button" class="btn btn-success" style="font-size:18px;outline:none">Contact Us</button>
+			 				</div>
+			 			</div>
+			 		</fieldset>
+			 	<!--Banner-->
+
+
+			 	</div>
+			 	<!-- menu -->
+
+
+
+			 	
+
+
+
+	
+			<div id="homesection"> <!--Home section-->
+				<!-- Home  header-->
+			 	<div class="col-sm-9" style="border-top:1px #ddd solid;border-right:1px #ddd solid;border-left:1px #ddd solid">
+			 		<div class="container-fuild" style="padding-bottom: 8px">
+			 			<h2><span style="color: #efab2f;" class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</h2>
+			 		</div>
+			 	</div><!-- Home  header-->
+
+
+
+			 	<!--Home body-->
+			 	<div class="col-sm-9" style="border:1px #ddd solid;text-align: center;">
+			 		
+			 		<!--Body wrapper-->
+			 		<div class="container-fuild" style="padding-bottom: 8px;padding:15px 0 15px 0;">
+			 			<img width="100%" src="https://udemy-images.udemy.com/course/750x422/1185210_6298.jpg">
+				 			
+
+				 			<div style="padding: 0 0px 0px 0px"><!--body container-->
+				 				
+
+				 				<!--Body header-->
+				 				<div class="container-fuild" style="padding: 0 50px 40px 50px">
+					 				<h3 style="color:#efab2f;margin-top: 40px;font-weight: bold; font-size:30px; line-height: 1.1;">Welcome To Student Manager</h3>
+					 				<hr width="60%">
+					 				<h3 style="color:#efab2f;font-weight: bold;">School Management Software that Increases Student Achievements & Teacher Performances</h3>
+					 				<h4 style="font-weight: bold;">Student Manager is a commercial grade, secure, scalable & intuitive Student Information System Aptech Software</h4>
+				 				</div>
+				 				<!--Body header-->
+
+
+
+				 				<!-- Studentmanager give you...-->
+				 				<div class="container-fuild" style="background-color: #3b3f44; padding: 20px 50px;margin-bottom: 40px">
+				 					<h3 style="font-weight: bold;color:white; font-size:30px"><span style="color:#efab2f;">Student Manager</span> Give You .....</h3>
+				 						<hr width="60%" style="color: white;">
+					 				<ul>
+					 					<li style="color:#efab2f; font-size:18px"><span style="color:white">An Online Student Management For The Web Generation</span></li><br>
+										<li style="color:#efab2f; font-size:18px"><span style="color:white">An Online Gradebook Software</span></li><br>
+										<li style="color:#efab2f; font-size:18px"><span style="color:white">A Way For School To Check And Store Students' Information</span></li><br>
+										<li style="color:#efab2f; font-size:18px"><span style="color:white">An Admissions Management Platform</span></li><br>
+										<li style="color:#efab2f; font-size:18px"><span style="color:white">A Center Location For Homework And Other Assignments</span></li><br>
+										<li style="color:#efab2f; font-size:18px"><span style="color:white">A Robust SIS (Student Information System Software</span></li><br>
+					 				</ul>
+				 				</div>
+				 				<!-- Studentmanager give you...-->
+
+
+
+				 				<!--Features-->
+				 				<div class="container-fuild">
+				 					<h3 style="font-weight: bold;font-size: 30px;color: #efab2f;">Features</h3>
+				 					
+
+				 					<!--feature row1-->
+				 					<div class="row" style="padding:60px 20px">
+				 						
+				 							<div class="col-sm-4">
+												<fieldset class="fs">
+													<legend class="glyphicon glyphicon-tasks" style="font-size:40px;"></legend>
+													<h4 id="feh" style="font-weight:bold;color: #efab2f">Student Information</h4>
+													<p id="fep">Get easy to access student particulars, their grades, schedules, attendence, address, extra-activities</p>
+												</fieldset>
+											</div>
+
+											<div class="col-sm-4">
+												<fieldset class="fs">
+													<legend class="glyphicon glyphicon-apple" style="font-size:40px;"></legend>
+													<h4 id="feh" style="font-weight:bold;color: #efab2f">Student Information</h4>
+													<p id="fep">Get easy to access student particulars, their grades, schedules, attendence, address, extra-activities</p>
+												</fieldset>
+											</div>
+
+											<div class="col-sm-4">
+												<fieldset class="fs">
+													<legend class="glyphicon glyphicon-stats" style="font-size:40px;"></legend>
+													<h4 id="feh" style="font-weight:bold;color: #efab2f">Student Information</h4>
+													<p id="fep">Get easy to access student particulars, their grades, schedules, attendence, address, extra-activities</p>
+												</fieldset>
+				 							</div>
+				 					
+
+
+				 					</div>
+
+				 					<!--feature row1-->
+
+
+
+				 					<!--feature row2-->
+				 					<div class="row" style="padding:40px 20px">
+				 						
+				 							<div class="col-sm-4">
+												<fieldset class="fs">
+													<legend class="glyphicon glyphicon-check" style="font-size:40px;"></legend>
+													<h4 id="feh" style="font-weight:bold;color: #efab2f">Student Information</h4>
+													<p id="fep">Get easy to access student particulars, their grades, schedules, attendence, address, extra-activities</p>
+												</fieldset>
+											</div>
+
+											<div class="col-sm-4">
+												<fieldset class="fs">
+													<legend class="glyphicon glyphicon-book" style="font-size:40px;"></legend>
+													<h4 id="feh" style="font-weight:bold;color: #efab2f">Student Information</h4>
+													<p id="fep">Get easy to access student particulars, their grades, schedules, attendence, address, extra-activities</p>
+												</fieldset>
+											</div>
+
+											<div class="col-sm-4">
+												<fieldset class="fs">
+													<legend class="glyphicon glyphicon-text-color" style="font-size:40px;"></legend>
+													<h4 id="feh" style="font-weight:bold;color: #efab2f">Student Information</h4>
+													<p id="fep">Get easy to access student particulars, their grades, schedules, attendence, address, extra-activities</p>
+												</fieldset>
+				 							</div>
+				 					
+
+
+				 					</div>
+				 					<!--Feature row2-->
+				 				</div>
+				 				<!--Features-->
+
+
+
+
+				 			</div>
+				 			<!--body container-->
+				 	</div>
+				 	<!--Body wrapper-->
+				
+				</div>
+				<!--Home body-->
+			
+			</div>
+			<!--Home section-->
+
+
+
+
+			<!--Student section-->
+			<div id="studentsection">
+				<div  class="col-sm-9" style="border-top:1px #ddd solid;border-right:1px #ddd solid;border-left:1px #ddd solid;padding-left: 35px">
+					<!--Student header-->
+					<div class="container-fuild" style="padding-bottom: 8px">
+						<h2><span class="glyphicon glyphicon-user" style="color:#efab2f"></span>&nbsp;&nbsp;Student</h2>
+					</div>
+				</div>
+				<!--Student section-->
+				
+
+
+				
+				<!--Student body-->
+				<div class="col-sm-9" style="border:1px #ddd solid;">
+						<div class="container-fluid" style="padding:20px">
+							<button id="newstudent" type="button" class="btn btn-success" style="outline:none;margin-bottom: 10px"><span class="glyphicon glyphicon-plus"></span>&nbsp;New Student</button>
+
+							<button style="outline: none;margin-bottom: 10px" type="button" class="btn btn-warning"><span class="glyphicon glyphicon-envelope"></span>&nbsp;Email</button>
+
+							<button style="outline: none;margin-bottom: 10px" type="button" class="btn btn-info"><span class="glyphicon glyphicon-download-alt"></span>&nbsp;Download</button>
+
+							<button id="addsearch" style="outline: none;margin-bottom: 10px" type="button" class="btn"><span class="glyphicon glyphicon-search"></span>&nbsp;Search</button>
+
+
+							<button id="sort" style="outline: none;margin-bottom: 10px" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-sort-by-alphabet"></span>&nbsp;Sort</button>
+
+							<form id="inputinfor">
+								<div class="table-responsive">
+								 	<table id="tb" class="table table-striped" style="border:1px rgb(221, 221, 221) solid">
+								 		<thead>
+								 			<span id="searchspan"></span>
+								 			<tr id="searchresult"></tr>
+
+									      	<tr>
+									        	<th>No</th>
+									        	<th>Name</th>
+									        	<th>Birthday</th>
+									        	<th>Address</th>
+									        	<th>Class</th>
+									        	<th>Phone Number</th>
+									      		<th>&nbsp;</th>
+									      		<th>&nbsp;</th>
+									      	</tr>
+
+
+									    </thead>
+									    
+									    <tbody id="addspan">
+									    </tbody>
+
+
+									    <tbody id="studentinfor">
+
+
+									    </tbody>
+
+
+								 	</table>
+							 	</div>
+							</form>
+						</div>	
+
+				</div>
+				<!--Student body-->	
+			</div>
+			<!--Student section-->
+
+
+
+
+			</div> <!-- thẻ row -->
+	</div>
+	<!-- website body -->
+
+
+
+	
+	
+
+
+
+	<footer class="container-fluid" style="padding-bottom: 30px" >
+  		<h5 style="text-align: center;">Copyright &copy; 2017. APTECH - News All rights reserved</h5>
+  		<br>
+  		<div class="list-group" >
+  			<h5 style="margin-left: 25px;font-weight: bold;font-size: 18px;color: #efab2f">Developer</h5>
+  			<ul>
+  				<li style="font-weight: bold;">
+  					Nguyễn Quang Tùng
+  				</li>
+
+  				<li style="font-weight: bold;">
+  					Hoàng Kim Chúc 
+  				</li>
+
+  				<li style="font-weight: bold;">
+  					Vũ Quốc Hưng
+  				</li>
+
+  			</ul>
+  		</div> 
+	</footer>
+
+
+
+
+	</body>
+</html>

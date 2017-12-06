@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="my-css.css">
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top transparent card-shadow">
+
+
+<!--Menu-->
+<nav class="navbar navbar-inverse transparent card-shadow">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">PingPoong</a>
+            <a style="color: #efab2f;" class="navbar-brand" href="#">WakeUp Project</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Trang Chủ</a></li>
+            <li class="active"><a  href="#">Trang Chủ</a></li>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Page 1-1</a></li>
@@ -32,16 +35,73 @@
             <li><a data-toggle="modal" data-target="#LogIn" href="#"><span class="fa fa-user-circle"></span>&nbsp;Đăng Nhập</a></li>
             <li><a data-toggle="modal" data-target="#Registration" href="#"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Đăng Ký</a></li>
         </ul>
+        <form class="navbar-form navbar-left">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search">
+				<div class="input-group-btn">
+					<button class="btn btn-default" type="submit">
+						<i class="glyphicon glyphicon-search"></i>
+					</button>
+				</div>
+			</div>
+		</form>
     </div>
 </nav>
-<div class="navbar-fixed-top" id="search">
-    <input type="search" name="search" placeholder="Tìm kiếm ...">
+<!--Menu-->
+
+<!--Side bar-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3">
+			<div class="list-group" >
+                <a href="#home" id="homemn" class="list-group-item"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-certificate"></span>&nbsp;&nbsp;Teacher & administrators</a>
+                <a href="#student" id="studentmn" class="list-group-item"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Students</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-calendar"></span>&nbsp;&nbsp;Calendar</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-tasks"></span>&nbsp;&nbsp;Library</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-usd"></span>&nbsp;&nbsp;Family & Invoices</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-stats"></span>&nbsp;&nbsp;Expenses & OtherIncome</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-road"></span>&nbsp;&nbsp;Mileage</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-globe"></span>&nbsp;&nbsp;Website</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Posts</a>
+                <a href="#" class="list-group-item"><span class="glyphicon glyphicon-duplicate"></span>&nbsp;&nbsp;Report Center</a>
+            </div>
+		</div>
+
+      
+        <!-- body  header-->
+        <div class="col-sm-9" style="border-top:1px #ddd solid;border-right:1px #ddd solid;border-left:1px #ddd solid">
+            <div class="container-fuild" style="padding-bottom: 8px;color: #efab2f;">
+                <h2 style="font-size: 29px">About Us</h2>
+            </div>
+        </div>
+        <!-- body  header-->
+
+
+
+                <!--Home body-->
+                <div class="col-sm-9" style="border:1px #ddd solid;text-align: center;">
+                    
+                    <!--Body wrapper-->
+                    <div class="container-fuild" style="padding-bottom: 8px;padding:15px 0 15px 0;">
+                        <img width="100%" src="file:///C:/xampp/htdocs/New/New2/Project%20Website/Image/iStock-520374378.jpg">         
+                    </div>
+                <!--Home body-->
+                </div>
+         
+
+	</div>
 </div>
-<br/>
-<br/>
-<div class="header">
-    <img src="Image/iStock-520374378.jpg" width="100%"/>
-</div>
+<!--Side bar-->
+
+
+
+
+
+
+
+
+<!--log in modal-->
 <div class="modal fade" id="LogIn" role="dialog">
     <div class="modal-dialog">
         <form>
@@ -70,6 +130,11 @@
         </form>
     </div>
 </div>
+<!--log in modal-->
+
+
+
+<!--register modal-->
 <div class="modal fade" id="Registration" role="dialog">
     <div class="modal-dialog">
         <form>
@@ -101,8 +166,8 @@
         </form>
     </div>
 </div>
-<hr/>
-<br/>
+<!--register modal-->
+
 
 </body>
 </html>

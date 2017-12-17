@@ -82,4 +82,8 @@ app.controller('listData', function($scope) {
         {"ten":"Nguyen Quang N", "sdt":"01633333549", "cua_hang":"Black Crow", "email":"quanghungleo@gmail.com", "thoi_gian":"4 năm trước"},
     ]
     $scope.data = data;
+    $scope.serial = 1;
+    $scope.indexCount = function(newPageNumber){
+	    $scope.serial = newPageNumber * 10 - 9;
+	}
 });

@@ -32,34 +32,35 @@
         <h1>Lead Merchant</h1>
     </div>
 </div>
-
-<div class="table-responsive" ng-controller="listData">
-    <table class="table table-striped table-bordered table-hover">
-        <thead>
-        <tr>
-            <th class="col-sm-1 color-gradient">STT</th>
-            <th class="col-sm-2 color-gradient">Tên</th>
-            <th class="col-sm-2 color-gradient">Số Điện Thoại</th>
-            <th class="col-sm-2 color-gradient">Cửa Hàng</th>
-            <th class="col-sm-3 color-gradient">Email</th>
-            <th class="col-sm-2 color-gradient">Thời Gian</th>
-        </tr>
-        </thead>
-        <tbody id="content">
-            <tr dir-paginate="val in data|itemsPerPage:10">
-                <td>{{ $index + serial}}</td>
-                <td>{{val.ten}}</td>
-                <td>{{val.sdt}}</td>
-                <td>{{val.cua_hang}}</td>
-                <td>{{val.email}}</td>
-                <td>{{val.thoi_gian}}</td>
+<div ng-controller="listData">
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th class="col-sm-1 color-gradient">STT</th>
+                <th class="col-sm-2 color-gradient">Tên</th>
+                <th class="col-sm-2 color-gradient">Số Điện Thoại</th>
+                <th class="col-sm-2 color-gradient">Cửa Hàng</th>
+                <th class="col-sm-3 color-gradient">Email</th>
+                <th class="col-sm-2 color-gradient">Thời Gian</th>
             </tr>
-        </tbody>
-    </table>
-</div>
-    <div style="text-align: center">
-        <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true" on-page-change='indexCount(newPageNumber)'></dir-pagination-controls>
+            </thead>
+            <tbody id="content">
+                <tr dir-paginate="val in data|itemsPerPage:10">
+                    <td>{{ $index + serial}}</td>
+                    <td>{{val.ten}}</td>
+                    <td>{{val.sdt}}</td>
+                    <td>{{val.cua_hang}}</td>
+                    <td>{{val.email}}</td>
+                    <td>{{val.thoi_gian}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+        <div style="text-align: center">
+            <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true" on-page-change='indexCount(newPageNumber)'></dir-pagination-controls>
+        </div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

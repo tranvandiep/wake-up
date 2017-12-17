@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>WifiMan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.0/ui-bootstrap-tpls.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+  <script src="C:\xampp\htdocs\WifiMan\source\js\devices.js"></script>
+  <link rel="stylesheet" type="text/css" href="C:\xampp\htdocs\WifiMan\source\css\devices.css">
+</head>
+<body data-ng-controller="myCtrl">
+
+	<div class="container">
+	<div class="panel">
+		<div class="panel-heading border">
+			<h2>Danh Sách Thiết Bị</h2>
+		</div>
+		<div class="panel-body">
+			<div class="table-responsive">
+			<table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
+				<thead>
+	  				<tr>
+						<th>NO</th>
+						<th>MAC</th>
+						<th>SSID</th>
+						<th>Shop Name</th>
+						<th>Num clients</th>
+						<th>Uptime</th>
+						<th>Last heartbeat</th>
+						<th>SSH Port</th>
+	  				</tr>
+				</thead>
+				<tbody>
+				  	<tr ng-repeat="n in data" class="success odd">
+						<td>{{$index+1}}</td>
+						<td><a href="http://grafana.wifiman.tech">{{n[0]}}</a></td>
+						<td>{{n[1]}}</td>
+						<td><a href="#">{{n[2]}}</a></td>
+						<td>{{n[3]}}</td>
+						<td>{{n[4] | date:'dd/MM/yyyy'}}</td>
+						<td>{{n[5]}}</td>
+						<td>{{n	[6]}}</td>
+				  	</tr>
+				</tbody>
+			</table>
+			</div>
+		 </div>
+	</div>
+	</div>
+  
+</body>
+</html>

@@ -13,6 +13,9 @@
 </head>
 
 <body>
+	<div>
+		<button id="scroll-btn" type="button">Top</button>
+	</div>
 
 	<nav class="navbar navbar-inverse visible-xs">
 		<div class="container-fluid">
@@ -35,7 +38,7 @@
 					<li class="list-group-item" ><a class="side-mn" href="marketing.html"><span class="glyphicon glyphicon-flash"></span>&nbsp;&nbsp;&nbsp;MARKETING TỰ ĐỘNG</a></li>
 					<li class="list-group-item" ><a class="side-mn" href="sms_log.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;SMS LOG</a></li>
 					<li class="list-group-item" ><a class="side-mn" href="xuat_file.html"><span class="glyphicon glyphicon-paste"></span>&nbsp;&nbsp;&nbsp;XUẤT FILE</a></li>
-					<li class="list-group-item" ><a class="side-mn" href="#section3"><span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;&nbsp;CÀI ĐẶT</a></li>
+					<li class="list-group-item" ><a class="side-mn" href="cai_dat.html"><span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;&nbsp;CÀI ĐẶT</a></li>
 					<li class="list-group-item" ><a href="Log_in_form.html" style="margin-right: 30px"><span class="glyphicon glyphicon-open"></span> Import khách</a></li>
 					<li class="list-group-item" ><a href="Log_in_form.html" style="margin-right: 30px"><span class="glyphicon glyphicon-user"></span> Thêm khách hàng</a></li>
 				</ul>
@@ -62,7 +65,7 @@
 
 						<li class="list-group-item" ><a class="side-mn" href="xuat_file.html" style="color: #9d9d9d"><span class="glyphicon glyphicon-paste" style="font-size: 23px"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XUẤT FILE</a></li>
 
-						<li class="list-group-item" ><a class="side-mn" href="#section3" style="color: #9d9d9d"><span class="glyphicon glyphicon-wrench" style="font-size: 23px"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CÀI ĐẶT</a></li>
+						<li class="list-group-item" ><a class="side-mn" href="cai_dat.html" style="color: #9d9d9d"><span class="glyphicon glyphicon-wrench" style="font-size: 23px"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CÀI ĐẶT</a></li>
 					</ul>
 			
 			</div>
@@ -101,260 +104,285 @@
 
 
 				<div class="container-fluid" id="mk-body2">
-					<form action="/action_page.php" method="POST" enctype="">
-						<h3 class="mk-form-title">Khách đến lần đầu</h3>
-						
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
+					<div style="">
+						<form action="/action_page.php" method="POST" enctype="" id="mk-col1-body">
+							<h3 class="mk-form-title">Khách đến lần đầu</h3>
+							
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
+							</div>
+							<div class="form-group">
+								<label for="thongdiep">THÔNG ĐIỆP:</label>
+								<textarea class="form-control" rows="4"></textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="thongdiep">CHI TIẾT:</label>
+								<textarea class="form-control" rows="2"></textarea>
+							</div>
+
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
+							</div>
+
+							<div class="form-group">
+								<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
+								<input type="text" class="han-dung-coupon">&nbsp;
+								<span>NGÀY</span>
+							</div>
+
+							<div class="form-group">
+								<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
+								<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
+							</div>
+
+							<div class="mk-append-html"></div>
+
+							<button type="submit" class="btn btn-default">Submit</button>
+							<span></span>
+							<hr>
+
+							<h3 class="mk-form-title">Khách quay lại</h3>
+							
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
+							</div>
+							<div class="form-group">
+								<label for="thongdiep">THÔNG ĐIỆP:</label>
+								<textarea class="form-control" rows="4"></textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="thongdiep">CHI TIẾT:</label>
+								<textarea class="form-control" rows="2"></textarea>
+							</div>
+
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
+							</div>
+
+							<div class="form-group">
+								<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
+								<input type="text" class="han-dung-coupon">&nbsp;
+								<span>NGÀY</span>
+							</div>
+
+							<div class="form-group">
+								<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
+								<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
+							</div>
+
+							<div class="mk-append-html"></div>
+
+							<button type="submit" class="btn btn-default">Submit</button>
+							<span></span>
+							<hr>
+
+							<h3 class="mk-form-title">Khách hàng thân thiết</h3>
+							
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
+							</div>
+							<div class="form-group">
+								<label for="thongdiep">THÔNG ĐIỆP:</label>
+								<textarea class="form-control" rows="4"></textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="thongdiep">CHI TIẾT:</label>
+								<textarea class="form-control" rows="2"></textarea>
+							</div>
+
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
+							</div>
+
+							<div class="form-group">
+								<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
+								<input type="text" class="han-dung-coupon">&nbsp;
+								<span>NGÀY</span>
+							</div>
+
+							<div class="form-group">
+								<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
+								<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
+							</div>
+
+							<div class="mk-append-html"></div>
+
+							<button type="submit" class="btn btn-default">Submit</button>
+							<span></span>
+							<hr>
+
+							<h3 class="mk-form-title">Khách lâu chưa quay lại (lần 1)</h3>
+							
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
+							</div>
+							<div class="form-group">
+								<label for="thongdiep">THÔNG ĐIỆP:</label>
+								<textarea class="form-control" placeholder="VD:Hi, đã lâu bạn chưa quay lại, chúng tôi gửi tặng bạn coupon OFF20 cho lần ghé thăm tói. Hẹn gặp lại bạn" rows="4"></textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="thongdiep">CHI TIẾT:</label>
+								<textarea class="form-control" rows="2"></textarea>
+							</div>
+
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
+							</div>
+
+							<div class="form-group">
+								<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
+								<input type="text" class="han-dung-coupon">&nbsp;
+								<span>NGÀY</span>
+							</div>
+
+							<div class="form-group">
+								<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
+								<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
+							</div>
+
+							<div class="mk-append-html"></div>
+
+							<button type="submit" class="btn btn-default">Submit</button>
+							<span></span>
+							<hr>
+
+							<h3 class="mk-form-title">Khách lâu chưa quay lại (lần 2)</h3>
+							
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
+							</div>
+							<div class="form-group">
+								<label for="thongdiep">THÔNG ĐIỆP:</label>
+								<textarea placeholder="VD:Hi, đã lâu bạn chưa quay lại, chúng tôi gửi tặng bạn coupon OFF20 cho lần ghé thăm tói. Hẹn gặp lại bạn" class="form-control" rows="4"></textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="thongdiep">CHI TIẾT:</label>
+								<textarea class="form-control" rows="2"></textarea>
+							</div>
+
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
+							</div>
+
+							<div class="form-group">
+								<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
+								<input type="text" class="han-dung-coupon">&nbsp;
+								<span>NGÀY</span>
+							</div>
+
+							<div class="form-group">
+								<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
+								<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
+							</div>
+
+							<div class="mk-append-html"></div>
+
+							<button type="submit" class="btn btn-default">Submit</button>
+							<span></span>
+							<hr>
+
+							<h3 class="mk-form-title">Khách lâu chưa quay lại (lần 3)</h3>
+							
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
+							</div>
+							<div class="form-group">
+								<label for="thongdiep">THÔNG ĐIỆP:</label>
+								<textarea placeholder="VD:Hi, đã lâu bạn chưa quay lại, chúng tôi gửi tặng bạn coupon OFF20 cho lần ghé thăm tói. Hẹn gặp lại bạn" class="form-control" rows="4"></textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="thongdiep">CHI TIẾT:</label>
+								<textarea class="form-control" rows="2"></textarea>
+							</div>
+
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
+							</div>
+
+							<div class="form-group">
+								<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
+								<input type="text" class="han-dung-coupon">&nbsp;
+								<span>NGÀY</span>
+							</div>
+
+							<div class="form-group">
+								<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
+								<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
+							</div>
+
+							<div class="mk-append-html"></div>
+
+							<button type="submit" class="btn btn-default">Submit</button>
+							<span></span>
+							<hr>
+
+							<h3 class="mk-form-title">Chúc mừng sinh nhật</h3>
+							
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
+							</div>
+							<div class="form-group">
+								<label for="thongdiep">THÔNG ĐIỆP:</label>
+								<textarea class="form-control" rows="4"></textarea>
+							</div>
+
+							<div class="form-group">
+								<label for="thongdiep">CHI TIẾT:</label>
+								<textarea class="form-control" rows="2"></textarea>
+							</div>
+
+							<div class="checkbox">
+								<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
+							</div>
+
+							<div class="form-group">
+								<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
+								<input type="text" class="han-dung-coupon">&nbsp;
+								<span>NGÀY</span>
+							</div>
+
+							<div class="form-group">
+								<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
+								<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
+							</div>
+							<hr>
+								<button type="submit" class="btn btn-default" id="mk-last-btn">Submit</button>
+						</form>
+					</div>
+						<!--*******************************************************************************************-->
+						<div class="container-fluid" id="mk-col2-div1" >
+							<div class="container-fluid" id="mk-col2-div2">
+								<button type="button" class="btn btn-default" id="mk-col2-btn">Tạo chiến dịch</button>
+							</div>
+
+							<div class="container-fluid" id="mk-col2-div3">
+								<h4>Lưu ý:</h4>
+								<p><strong>Để đảm bảo nội dung không vi phạm các quy định của pháp luật và gửi SMS Marketing hiệu quả, đúng luật, tính năng này sẽ không thực hiện TỰ ĐỘNG. Vui lòng gọi hỗ trợ qua 0936 735 768 hoặc Skype: tunght89 để yêu cầu kích hoạt chương trình gửi khi có chiến dịch.</strong></p>
+
+								<table class="table table-striped  table-responsive" id="mk-col2-table">
+									<thead>
+										<tr>
+											<th>CODE</th>
+											<th>MÔ TẢ</th>
+											<th>NGÀY GỬI</th>
+											<th>GIỜ GỬI</th>
+											<th>TRẠNG THÁI</th>
+											<th>TẠO LÚC</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										
+									</tbody>
+								</table>
+							</div>
 						</div>
-						<div class="form-group">
-							<label for="thongdiep">THÔNG ĐIỆP:</label>
-							<textarea class="form-control" rows="4"></textarea>
-						</div>
-
-						<div class="form-group">
-							<label for="thongdiep">CHI TIẾT:</label>
-							<textarea class="form-control" rows="2"></textarea>
-						</div>
-
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
-						</div>
-
-						<div class="form-group">
-							<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
-							<input type="text" class="han-dung-coupon">&nbsp;
-							<span>NGÀY</span>
-						</div>
-
-						<div class="form-group">
-							<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
-							<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
-						</div>
-
-						<div class="mk-append-html"></div>
-
-						<button type="submit" class="btn btn-default">Submit</button>
-						<span></span>
-						<hr>
-
-						<h3 class="mk-form-title">Khách quay lại</h3>
-						
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
-						</div>
-						<div class="form-group">
-							<label for="thongdiep">THÔNG ĐIỆP:</label>
-							<textarea class="form-control" rows="4"></textarea>
-						</div>
-
-						<div class="form-group">
-							<label for="thongdiep">CHI TIẾT:</label>
-							<textarea class="form-control" rows="2"></textarea>
-						</div>
-
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
-						</div>
-
-						<div class="form-group">
-							<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
-							<input type="text" class="han-dung-coupon">&nbsp;
-							<span>NGÀY</span>
-						</div>
-
-						<div class="form-group">
-							<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
-							<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
-						</div>
-
-						<div class="mk-append-html"></div>
-
-						<button type="submit" class="btn btn-default">Submit</button>
-						<span></span>
-						<hr>
-
-						<h3 class="mk-form-title">Khách hàng thân thiết</h3>
-						
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
-						</div>
-						<div class="form-group">
-							<label for="thongdiep">THÔNG ĐIỆP:</label>
-							<textarea class="form-control" rows="4"></textarea>
-						</div>
-
-						<div class="form-group">
-							<label for="thongdiep">CHI TIẾT:</label>
-							<textarea class="form-control" rows="2"></textarea>
-						</div>
-
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
-						</div>
-
-						<div class="form-group">
-							<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
-							<input type="text" class="han-dung-coupon">&nbsp;
-							<span>NGÀY</span>
-						</div>
-
-						<div class="form-group">
-							<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
-							<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
-						</div>
-
-						<div class="mk-append-html"></div>
-
-						<button type="submit" class="btn btn-default">Submit</button>
-						<span></span>
-						<hr>
-
-						<h3 class="mk-form-title">Khách lâu chưa quay lại (lần 1)</h3>
-						
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
-						</div>
-						<div class="form-group">
-							<label for="thongdiep">THÔNG ĐIỆP:</label>
-							<textarea class="form-control" placeholder="VD:Hi, đã lâu bạn chưa quay lại, chúng tôi gửi tặng bạn coupon OFF20 cho lần ghé thăm tói. Hẹn gặp lại bạn" rows="4"></textarea>
-						</div>
-
-						<div class="form-group">
-							<label for="thongdiep">CHI TIẾT:</label>
-							<textarea class="form-control" rows="2"></textarea>
-						</div>
-
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
-						</div>
-
-						<div class="form-group">
-							<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
-							<input type="text" class="han-dung-coupon">&nbsp;
-							<span>NGÀY</span>
-						</div>
-
-						<div class="form-group">
-							<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
-							<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
-						</div>
-
-						<div class="mk-append-html"></div>
-
-						<button type="submit" class="btn btn-default">Submit</button>
-						<span></span>
-						<hr>
-
-						<h3 class="mk-form-title">Khách lâu chưa quay lại (lần 2)</h3>
-						
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
-						</div>
-						<div class="form-group">
-							<label for="thongdiep">THÔNG ĐIỆP:</label>
-							<textarea placeholder="VD:Hi, đã lâu bạn chưa quay lại, chúng tôi gửi tặng bạn coupon OFF20 cho lần ghé thăm tói. Hẹn gặp lại bạn" class="form-control" rows="4"></textarea>
-						</div>
-
-						<div class="form-group">
-							<label for="thongdiep">CHI TIẾT:</label>
-							<textarea class="form-control" rows="2"></textarea>
-						</div>
-
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
-						</div>
-
-						<div class="form-group">
-							<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
-							<input type="text" class="han-dung-coupon">&nbsp;
-							<span>NGÀY</span>
-						</div>
-
-						<div class="form-group">
-							<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
-							<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
-						</div>
-
-						<div class="mk-append-html"></div>
-
-						<button type="submit" class="btn btn-default">Submit</button>
-						<span></span>
-						<hr>
-
-						<h3 class="mk-form-title">Khách lâu chưa quay lại (lần 3)</h3>
-						
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
-						</div>
-						<div class="form-group">
-							<label for="thongdiep">THÔNG ĐIỆP:</label>
-							<textarea placeholder="VD:Hi, đã lâu bạn chưa quay lại, chúng tôi gửi tặng bạn coupon OFF20 cho lần ghé thăm tói. Hẹn gặp lại bạn" class="form-control" rows="4"></textarea>
-						</div>
-
-						<div class="form-group">
-							<label for="thongdiep">CHI TIẾT:</label>
-							<textarea class="form-control" rows="2"></textarea>
-						</div>
-
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
-						</div>
-
-						<div class="form-group">
-							<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
-							<input type="text" class="han-dung-coupon">&nbsp;
-							<span>NGÀY</span>
-						</div>
-
-						<div class="form-group">
-							<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
-							<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
-						</div>
-
-						<div class="mk-append-html"></div>
-
-						<button type="submit" class="btn btn-default">Submit</button>
-						<span></span>
-						<hr>
-
-						<h3 class="mk-form-title">Chúc mừng sinh nhật</h3>
-						
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">KÍCH HOẠT</label>
-						</div>
-						<div class="form-group">
-							<label for="thongdiep">THÔNG ĐIỆP:</label>
-							<textarea class="form-control" rows="4"></textarea>
-						</div>
-
-						<div class="form-group">
-							<label for="thongdiep">CHI TIẾT:</label>
-							<textarea class="form-control" rows="2"></textarea>
-						</div>
-
-						<div class="checkbox">
-							<label><input type="checkbox" name="remember" class="mk-checkbox">TỰ ĐỘNG GỬI SMS</label>
-						</div>
-
-						<div class="form-group">
-							<span>HẠN DÙNG COUPON (NẾU CÓ):</span>&nbsp;
-							<input type="text" class="han-dung-coupon">&nbsp;
-							<span>NGÀY</span>
-						</div>
-
-						<div class="form-group">
-							<span>GIỜ GỬI SMS TỰ ĐỘNG</span>&nbsp;
-							<button type="button" class="btn btn-success" id="mk-form-btn">Thêm khung giờ gửi sms</button>
-						</div>
-
-						<div class="mk-append-html"></div>
-
-						<button type="submit" class="btn btn-default">Submit</button>
-						<span></span>
-						<hr>
-					</form>
-
 				</div>
 
 

@@ -1,0 +1,79 @@
+@font-face{
+    font-family:utm_avo;src:url('../font/UTMAvo.ttf')
+}
+@font-face{
+    font-family:utm_impact;src:url('../font/UTMImpact.ttf')
+}
+
+.nav.navbar-nav.navbar-right a {
+    color: #cdd2d8;
+}
+
+#last-menu {
+    margin-right: 100px;
+}
+
+#main-navbar {
+    background-color: #474545;
+    border:none;
+    padding: 3px 0;
+}
+
+.card-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row-center {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.divider-1 span {
+    display: inline-block;
+    width: 200px;
+    border-bottom: 1px dotted #aaa;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.padding_style {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.icon-like {
+    border-radius: 50%;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: #E1E1E1;
+    color: #4080FF;
+    padding-top: 11px;
+    display: inline-block;
+}
+
+.introduce {
+    padding-bottom: 20px;
+}
+
+.introduce h3 {
+    line-height: 30px;
+}
+
+.introduce div {
+    padding-top: 20px;
+}
+
+.btn-style {
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 17px;
+}

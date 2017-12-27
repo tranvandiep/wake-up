@@ -9,7 +9,10 @@ $(document).ready(function(){
 	            }
 	});
 
+   	$('#toggle-nav-button').click(function(){
+   		$('#main-navbar').css("background-color", "#474545");
 
+   });
 
 
 });

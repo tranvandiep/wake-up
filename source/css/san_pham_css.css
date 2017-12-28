@@ -8,6 +8,11 @@
 .nav.navbar-nav.navbar-right a {
     color: #cdd2d8;
 }
+.nav.navbar-nav.navbar-right a:hover {
+    color: #484646;
+    background-color: #E1E1E1;
+    border-radius: 5px;
+}
 
 #last-menu {
     margin-right: 100px;

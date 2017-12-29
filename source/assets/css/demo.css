@@ -827,7 +827,7 @@
     transform: translate3d(0, 39px, 0) !important;
 }
 
-#search_input {
+#search-input {
     float: right;
     width: 170px;
     border: 2px solid #ccc;
@@ -841,17 +841,17 @@
     transition: width 0.5s ease-in-out;
 }
 
-#search_input:focus {
+#search-input:focus {
     width: 250px
 }
 
 @media screen and (max-width: 768px) {
-    #search_input {
+    #search-input {
         float: left;
         width: 100%;
     }
 
-    #search_input:focus {
+    #search-input:focus {
     width: 100%;
 }
 }

@@ -27,7 +27,8 @@
 }
 .nav.navbar-nav.navbar-right a:hover {
     color: white;
-    background-color: rgba(225, 225, 225, 0.3);
+    /*background-color: rgba(225, 225, 225, 0.3);*/
+    background-color: transparent;
     border-radius: 5px;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -50,7 +51,6 @@
 .navbar-inverse .navbar-nav > .active > a:focus {
     color: #ffffff;
     background-color: transparent;
-    font-weight: bold;
 }
 
 .header-content {
@@ -204,4 +204,15 @@
 
 #footer p {
     text-align: center;
+}
+
+#myModal .form-control {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    box-shadow: none;
+}
+
+#myModal button {
+    float: right;
 }

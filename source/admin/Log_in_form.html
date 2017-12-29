@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WifiMan</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="Log_in_form.css">
+
+</head>
+<body>
+
+	<div id="overlay">
+
+		<!--head page-->
+		<div id="head-wrapper">
+			<!--logo-->
+			<div id="form-image" class="container">       
+				<img src="https://www.wifiman.tech/static/wifiman.png?v2" class="img-rounded" alt="Cinque Terre" width="145" height="auto"> 
+		    </div>
+
+		    <!--alert-->
+			<div class="container" id="Login-title">
+				<div class="alert alert-success" >
+					Nhập số điện thoại quản lý cửa hàng
+				</div>
+			</div>
+
+		</div>
+
+
+		<!--form page-->
+		<div class="container" id="Login_form">
+			<form action="/action_page.php">
+				<!--input-->
+				<div class="form-group">
+					<label for="Phone-number">Số điện thoại:</label>
+					<input type="email" required class="form-control" id="email" name="Phone-number">
+				</div>
+
+				<div class="checkbox">
+					<label><input type="checkbox" required value="">Quản lý chuỗi</label>
+				</div>
+				
+				<button type="submit" class="btn btn-block">Tiếp Tục</button>
+			</form>
+		</div>
+
+	</div>
+	
+
+</body>
+</html>

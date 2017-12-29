@@ -5,6 +5,29 @@
     font-family:utm_impact;src:url('../font/UTMImpact.ttf')
 }
 
+#header-wrapper {
+    width: 100%;
+    height: 650px;
+    background: linear-gradient(#333333b0, #33333336) ,
+    url('https://ak4.picdn.net/shutterstock/videos/5092454/thumb/1.jpg');
+    padding:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#main-navbar {
+    background-color: transparent;
+    /*all the color changing function will be done slowly */
+    -webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
+    /*all the color changing function will be done slowly */
+    border:none;
+    padding: 10px 0;
+}
+
 .nav.navbar-nav.navbar-right a {
     color: #cdd2d8;
 }
@@ -19,9 +42,56 @@
 }
 
 #main-navbar {
-    background-color: #474545;
+    background-color: transparent;
     border:none;
     padding: 3px 0;
+}
+
+.header-content {
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+    /*not allow user to hightlight the text*/
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;	/* Non-prefixed version, currently  supported by Chrome and Opera */
+    /*not allow user to hightlight the text*/
+
+}
+
+.header-content p {
+    font-size: 23px;
+    color: #cdd2d8;
+}
+
+.header-content button {
+    padding:15px 20px 15px 20px;
+    font-size: 18px
+}
+
+.header-content .btn {
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border:none;
+    color: white;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.header-content #btn1:hover {
+    background-color: rgba(91, 192, 222, 0.7);
+}
+
+.header-content #btn2{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-content #btn2:hover {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .card-shadow {
@@ -36,6 +106,12 @@
 .divider-1 span {
     display: inline-block;
     width: 200px;
+    border-bottom: 1px dotted #aaa;
+}
+
+.divider-2 {
+    display: inline-block;
+    width: 100%;
     border-bottom: 1px dotted #aaa;
 }
 
@@ -64,12 +140,28 @@
     display: inline-block;
 }
 
+.icon-footer {
+    border-radius: 50%;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: #E1E1E1;
+    color: #4080FF;
+    padding-top: 13px;
+    display: inline-block;
+}
+
 .introduce {
     padding-bottom: 20px;
 }
 
 .introduce h3 {
     line-height: 30px;
+}
+
+.introduce h4 {
+    line-height: 25px;
 }
 
 .introduce div {

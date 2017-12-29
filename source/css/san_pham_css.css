@@ -1,0 +1,207 @@
+
+#main-navbar {
+
+    /*all the color changing function will be done slowly */
+    -webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
+    /*all the color changing function will be done slowly */
+    border:none;
+    padding: 10px 0;
+}
+
+#header-wrapper {
+    width: 100%;
+    height: 650px;
+    background: linear-gradient(#333333b0, #33333336) ,
+    url('https://ak4.picdn.net/shutterstock/videos/5092454/thumb/1.jpg');
+    padding:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.nav.navbar-nav.navbar-right a {
+    color: #cdd2d8;
+}
+.nav.navbar-nav.navbar-right a:hover {
+    color: white;
+    background-color: rgba(225, 225, 225, 0.3);
+    border-radius: 5px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+#last-menu {
+    margin-right: 100px;
+}
+
+#main-navbar {
+    background-color: transparent;
+    border:none;
+    padding: 3px 0;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.header-content {
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+    /*not allow user to hightlight the text*/
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;	/* Non-prefixed version, currently  supported by Chrome and Opera */
+    /*not allow user to hightlight the text*/
+
+}
+
+.header-content p {
+    font-size: 23px;
+    color: #cdd2d8;
+}
+
+.header-content button {
+    padding:15px 20px 15px 20px;
+    font-size: 18px
+}
+
+.header-content .btn {
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border:none;
+    color: white;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+
+.header-content #btn1:hover {
+    background-color: rgba(91, 192, 222, 0.7);
+}
+
+.header-content #btn2{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-content #btn2:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row-center {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.divider-1 span {
+    display: inline-block;
+    width: 200px;
+    border-bottom: 1px dotted #aaa;
+}
+
+.divider-2 {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px dotted #aaa;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+.padding_style {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.icon-like {
+    border-radius: 50%;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: #5CC0DE;
+    color: #565656;
+    padding-top: 11px;
+    display: inline-block;
+}
+
+.icon-footer {
+    border-radius: 50%;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: #DFDFDF;
+    color: #555555;
+    padding-top: 13px;
+    display: inline-block;
+}
+
+#ic-facebook{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4267B2;
+}
+#ic-twitter {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #1DA1F2;
+}
+#ic-instagram {
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(to top right, #ffcc00 10%, #cc0099, #990099, #3333cc)
+}
+#ic-google{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #E84234;
+}
+
+.introduce {
+    padding-bottom: 20px;
+}
+
+.introduce h3 {
+    line-height: 30px;
+}
+
+.introduce h4 {
+    line-height: 25px;
+}
+
+.introduce div {
+    padding-top: 20px;
+}
+
+.btn-style {
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 17px;
+}
+
+#footer p {
+    text-align: center;
+}

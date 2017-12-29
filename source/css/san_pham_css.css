@@ -107,6 +107,7 @@
 .row-center {
     text-align: center;
     padding-top: 20px;
+    margin:auto;
 }
 
 .divider-1 span {

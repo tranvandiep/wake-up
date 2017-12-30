@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Kí Zalo Tools</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+    <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/dang_ki_css.css">
+</head>
+<body>
+<span id="trang_chu"></span>
+<div class="container-fluid" id="header-wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id="toggle-nav-button">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="san_pham_page.html">TRANG CHỦ</a></li>
+                    <li><a href="san_pham_page.html">TÍNH NĂNG</a></li>
+                    <li><a href="san_pham_page.html">BẢNG GIÁ</a></li>
+                    <li><a href="san_pham_page.html">HỖ TRỢ</a></li>
+                    <li><a href="#huong_dan" class="cool-link">HƯỚNG DẪN</a></li>
+                    <li><a href="#dang_nhap" id="last-menu" data-toggle="modal" data-target="#myModal">ĐĂNG NHẬP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog" style="width: 35%">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom-color: #1DC7EA">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!--<h4 class="modal-title">Modal Header</h4>-->
+                    <img src="photo/lgozalo.png" width="100px"/>
+                </div>
+                <div class="modal-body" style="width: 80%; margin: auto">
+                    <br/>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="usr" placeholder="Tài khoản, Email hoặc Số điện thoại">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu">
+                        </div>
+                        <br/>
+                        <button type="submit" class="btn btn-info" style="width: 100%">Đăng nhập ngay</button>
+                    </form>
+                    <br/>
+                    <br/>
+                    <p style="text-align: center">hoặc</p>
+                    <button class="btn btn-info" style="width: 100%">Tạo tài khoản mới</button>
+                    <br/>
+                    <br/>
+                    <p style="text-align: center"><a href="#">Quên mật khẩu</a></p>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="header-content">
+        <h1 id="header-h1" class="wow bounceInLeft" data-wow-delay="0.1s">LIÊN HỆ ZALO TOOLS</h1>
+        <h1 class="divider-1 wow bounceInLeft" data-wow-delay="0.2s"><span></span></h1><br>
+        <p class="wow bounceInLeft" data-wow-delay="0.3s">Hoặc gọi ngay: .............</p><br>
+        <div id="form-reg">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="usr" placeholder="Tên tài khoản">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Nhập lại mật khẩu">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="pnb" placeholder="Số điện thoại">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="ema" placeholder="Email">
+                </div>
+                <br/>
+                <button type="submit" class="btn btn-info">Đăng kí dùng Zalo Tools</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid divider-2" style="color: #474545; background-color: #F8F8F8" id="footer">
+    <div class="row row-center">
+        <a href="#" id="ic-facebook" class="fa fa-facebook icon-footer wow bounceInLeft" data-wow-delay="0.9s"></a>&nbsp;&nbsp;&nbsp;
+        <a href="#" id="ic-twitter" class="fa fa-twitter icon-footer wow bounceInLeft" data-wow-delay="0.7s"></a>&nbsp;&nbsp;&nbsp;
+        <a href="#" id="ic-instagram" class="fa fa-instagram icon-footer wow bounceInLeft" data-wow-delay="0.5s"></a>&nbsp;&nbsp;&nbsp;
+        <a href="#" id="ic-google" class="fa fa-google icon-footer wow bounceInLeft" data-wow-delay="0.3s"></a>
+    </div>
+    <br/>
+    <p class="wow fadeInDown" data-wow-delay="1s"> Contact us: <a href="mailto:ZaloTools@gmail.com">ZaloTools@gmail.com</a></p>
+    <p class="wow fadeInDown" data-wow-delay="1s"> Copyright ©2017 : Designed by <a href="ZicZacGroup.com">ZicZacGroup</a></p>
+</div>
+
+</body>
+<script src="js/dang_ki_js.js"></script>
+</html>

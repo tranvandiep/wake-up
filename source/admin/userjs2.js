@@ -178,9 +178,45 @@ $(document).ready(function(){
 		$(arricon1).html(
 			'<i class="fa-icon fa fa-check" title="Lưu"></i>'
 		);
+		$(".fa-icon.fa.fa-check").hover(function(){
+			$(this).css("font-size" , "20px");
+		});
+		$(".fa-icon.fa.fa-check").mouseout(function(){
+			$(this).css("font-size" , "inherit");
+		});
+
 		$(arricon2).html(
-			'<i class="fa-icon  fa fa-remove" title="Thoát" style="margin-top:9px"></i>'
+			'<i class="fa-icon fa fa-remove" title="Thoát" style="margin-top:5px"></i>'
 		);
+
+		$(".fa-icon.fa.fa-remove").css("color" ,"#e43333");
+		$(".fa-icon.fa.fa-remove").hover(function(){
+			$(this).css("font-size" , "20px");
+		});
+		$(".fa-icon.fa.fa-remove").mouseout(function(){
+			$(this).css("font-size" , "inherit");
+		});
+
+		$(".fa-icon.fa.fa-remove").click(function(){
+			$(arrname).html(
+				'<a href="table.html">'
+				+
+				arr[f].name
+				+
+				'</i>'
+			);
+			$(arrdetail).html(arr[f].details);
+
+			$(arricon1).html(
+				'<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
+			);
+			$(arricon2).html(
+				'<i class="fa-icon fa fa-close" title="Xóa"></i>'
+			);
+
+
+		});
+
 
 		$(".fa-icon.fa.fa-check").click(function(){
 			arr[f].name = $(".input-arrname").val();
@@ -205,7 +241,7 @@ $(document).ready(function(){
 			);
 
 		});
-
+	
 
      /* var f = $(a).find('.bang-id').html();
       $("#edited-id").html($(a).find('.bang-id').html());

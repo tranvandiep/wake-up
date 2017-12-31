@@ -892,7 +892,7 @@
     font-size: 16px;
     background-color: white;
 } 
-.fa-icon.fa.fa-close ,  .fa-icon.fa.fa-remove {
+.fa-icon.fa.fa-close  {
     color: #e43333;
     font-weight: bold;
     cursor: pointer;

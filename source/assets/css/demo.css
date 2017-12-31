@@ -927,7 +927,7 @@
     background-color: #5e8a15
 }
 
-#edit-input1 , #edit-input2 {
+#edit-input1 , #edit-input2 , .edit1 , .edit2{
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
@@ -958,7 +958,7 @@
     background-color: #fa1825;
     color: white;
     opacity:1;
-    padding: 5px 10px;
+    padding: 4px 10px;
     outline: none;
     border:none;
     border-radius: 5px;
@@ -970,4 +970,12 @@
 
 #exit-edit:visited , #exit-edit:active {
     background-color: #ab2a33
+}
+
+.fa.fa-arrow-right {
+    color: #e43333;
+}
+
+.fa.fa-arrow-right:hover {
+    font-size: 20px;
 }

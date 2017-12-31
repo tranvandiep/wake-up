@@ -33,7 +33,7 @@ $(document).ready(function(){
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arrname">'
 	      +
 	      '<a href="table.html">'
 	      +
@@ -43,19 +43,19 @@ $(document).ready(function(){
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arrdetail">'
 	      +
 	      arr[0].details
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arricon1">'
 	      +
 	      '<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
 	      +
 	      '</td>'
 	      +
-	      '<td>'
+	      '<td class="arricon2">'
 	      +
 	      '<i class="fa-icon fa fa-close" title="Xóa"></i>'
 	      +
@@ -71,7 +71,7 @@ $(document).ready(function(){
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arrname">'
 	      +
 	      '<a href="table.html">'
 	      +
@@ -81,19 +81,19 @@ $(document).ready(function(){
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arrdetail">'
 	      +
 	      arr[1].details
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arricon1">'
 	      +
 	      '<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
 	      +
 	      '</td>'
 	      +
-	      '<td>'
+	      '<td class="arricon2">'
 	      +
 	      '<i class="fa-icon fa fa-close" title="Xóa"></i>'
 	      +
@@ -108,7 +108,7 @@ $(document).ready(function(){
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arrname">'
 	      +
 	      '<a href="table.html">'
 	      +
@@ -118,19 +118,19 @@ $(document).ready(function(){
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arrdetail">'
 	      +
 	      arr[2].details
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arricon1">'
 	      +
 	      '<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
 	      +
 	      '</td>'
 	      +
-	      '<td>'
+	      '<td class="arricon2">'
 	      +
 	      '<i class="fa-icon fa fa-close" title="Xóa"></i>'
 	      +
@@ -160,8 +160,54 @@ $(document).ready(function(){
 	});
   //xoa da xong
 
-  $('table').on('click', '.fa-icon.fa.fa-pencil', function(){
-      var a = $(this).closest("tr");
+	$('table').on('click', '.fa-icon.fa.fa-pencil', function(){
+
+		var a = $(this).closest("tr");
+		var f = $(a).find(".bang-id").html() - 1;
+		var arrname = $(a).find(".arrname");
+		var arrdetail = $(a).find(".arrdetail");
+		var arricon1 = $(a).find(".arricon1");
+		var arricon2 = $(a).find(".arricon2");
+		$(arrname).html(
+			'<input type="text" class="input-arrname" placeholder="Tên mới">'
+		);
+
+		$(arrdetail).html(
+			'<input type="text" class="input-arrdetail" placeholder="Chi tiết mới">'
+		);
+		$(arricon1).html(
+			'<i class="fa-icon fa fa-check" title="Lưu"></i>'
+		);
+		$(arricon2).html(
+			'<i class="fa-icon  fa fa-remove" title="Thoát" style="margin-top:9px"></i>'
+		);
+
+		$(".fa-icon.fa.fa-check").click(function(){
+			arr[f].name = $(".input-arrname").val();
+			arr[f].details = $(".input-arrdetail").val();
+			$(arrname).html(
+				'<a href="table.html">'
+				+
+				arr[f].name
+				+
+				'</i>'
+			);
+
+			$(arrdetail).html(
+				arr[f].details
+			);
+
+			$(arricon1).html(
+				'<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
+			);
+			$(arricon2).html(
+				'<i class="fa-icon fa fa-close" title="Xóa"></i>'
+			);
+
+		});
+
+
+     /* var f = $(a).find('.bang-id').html();
       $("#edited-id").html($(a).find('.bang-id').html());
       $(a).siblings().hide();
       $("#edit-form").show();
@@ -172,12 +218,13 @@ $(document).ready(function(){
               $("#edit-form").hide();
               $(".fa-icon.fa.fa-pencil").show();
           $(".fa-icon.fa.fa-close").show();
-        });
+        });*/
 
-		$("#saved-change").click(function(){
-			
+/*		$("#saved-change").click(function(){
+			arr[f].name = $("#edit-input1").val();
+			arr[f].details = $("#edit-input2").val();
 
-		});	
+		});	*/
 	});
 
 
@@ -194,7 +241,7 @@ $(document).ready(function(){
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arrname">'
 	      +
 	      '<a href="table.html">'
 	      +
@@ -204,19 +251,19 @@ $(document).ready(function(){
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arrdetail">'
 	      +
 	      $("#add-detail-col2-2").val()
 	      +
 	      '</td>'
 	      + 
-	      '<td>'
+	      '<td class="arricon1">'
 	      +
 	      '<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
 	      +
 	      '</td>'
 	      +
-	      '<td>'
+	      '<td class="arricon2">'
 	      +
 	      '<i class="fa-icon fa fa-close" title="Xóa"></i>'
 	      +

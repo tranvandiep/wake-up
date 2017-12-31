@@ -1,10 +1,144 @@
 $(document).ready(function(){
 	var arr = [];
-	var count = 0;
+	var obj = {
+		"id":1,
+	    "name":"Khách VIP",
+	    "details":"Chi tiết",	
+	};
+	arr[arr.length] = obj;
+	var obj = {
+		"id":2,
+	    "name":"Khách Thường Xuyên Sử Dụng",
+	    "details":"Chi tiết",	
+	};
+	arr[arr.length] = obj;
+	var obj = {
+		"id":3,
+	    "name":"Khách Mới Sử dụng",
+	    "details":"Chi tiết",	
+	};
+	arr[arr.length] = obj;
+	var count = 3;
 	var obj = {};
   var add1 = $("#add-name-col2-1").val();
   var add2 = $("#add-detail-col2-2").val();
   $("#edit-form").hide();
+
+  $("#add-point").append(
+	      '<tr>'
+	      +
+	      '<td class="bang-id">'
+	      +
+	      1
+	      +
+	      '</td>'
+	      + 
+	      '<td>'
+	      +
+	      '<a href="table.html">'
+	      +
+	      arr[0].name
+	      +
+	      '</i>'
+	      +
+	      '</td>'
+	      + 
+	      '<td>'
+	      +
+	      arr[0].details
+	      +
+	      '</td>'
+	      + 
+	      '<td>'
+	      +
+	      '<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
+	      +
+	      '</td>'
+	      +
+	      '<td>'
+	      +
+	      '<i class="fa-icon fa fa-close" title="Xóa"></i>'
+	      +
+	      '</td>'                                 
+	      +
+	      '</tr>'
+	      +
+	      '<tr>'
+	      +
+	      '<td class="bang-id">'
+	      +
+	      2
+	      +
+	      '</td>'
+	      + 
+	      '<td>'
+	      +
+	      '<a href="table.html">'
+	      +
+	      arr[1].name
+	      +
+	      '</i>'
+	      +
+	      '</td>'
+	      + 
+	      '<td>'
+	      +
+	      arr[1].details
+	      +
+	      '</td>'
+	      + 
+	      '<td>'
+	      +
+	      '<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
+	      +
+	      '</td>'
+	      +
+	      '<td>'
+	      +
+	      '<i class="fa-icon fa fa-close" title="Xóa"></i>'
+	      +
+	      '</td>'                                 
+	      +
+	      '</tr>'
+	      +'<tr>'
+	      +
+	      '<td class="bang-id">'
+	      +
+	      3
+	      +
+	      '</td>'
+	      + 
+	      '<td>'
+	      +
+	      '<a href="table.html">'
+	      +
+	      arr[2].name
+	      +
+	      '</i>'
+	      +
+	      '</td>'
+	      + 
+	      '<td>'
+	      +
+	      arr[2].details
+	      +
+	      '</td>'
+	      + 
+	      '<td>'
+	      +
+	      '<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
+	      +
+	      '</td>'
+	      +
+	      '<td>'
+	      +
+	      '<i class="fa-icon fa fa-close" title="Xóa"></i>'
+	      +
+	      '</td>'                                 
+	      +
+	      '</tr>'
+	    );
+
   //Tim dx xong
   $("#search-input").on("keyup", function() {
     var value = $(this).val().toLowerCase();

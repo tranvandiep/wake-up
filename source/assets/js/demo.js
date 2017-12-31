@@ -1,10 +1,8 @@
-$(document).ready(function() {
-	  $("#search-input").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#nhom-table > tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
+$().ready(function() {
+	
+
+
+
     $sidebar = $('.sidebar');
     $sidebar_img_container = $sidebar.find('.sidebar-background');
 

@@ -1,21 +1,43 @@
 new WOW().init();
 $(document).ready(function(){
-    var count = 0;
-    $(window).scroll(function(e1){
-        if($(this).scrollTop() > 300 ) {
+
+    $(window).scroll(function(){
+        if($(this).scrollTop() > 150 ) {
             $('#main-navbar').css("background-color", "#474545");
-            $('#main-navbar').css("box-shadow", "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)");
-        } else {
+        }
+        else {
             $('#main-navbar').css("background-color", "transparent");
-            $('#main-navbar').css("box-shadow", "none");
         }
     });
 
     $('#toggle-nav-button').click(function(){
         $('#main-navbar').css("background-color", "#474545");
-        $('#main-navbar').css("box-shadow", "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)");
-
     });
+});
 
+$(document).ready(function(){
+    // Add scrollspy to <body>
+    $('body').scrollspy({target: ".navbar", offset: 50});
 
+    // Add smooth scrolling on all links inside the navbar
+    $("#myNavbar a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        }  // End if
+    });
 });

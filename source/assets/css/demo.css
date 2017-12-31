@@ -860,9 +860,114 @@
 }
 
 .card-title {
-    margin-top: 15px
+    margin-top: 5px
 }
 
 #table-header {
     margin-bottom: 20px
+}
+
+#card2-header {
+    background-color: white;
+    background-clip: border-box;
+    border-left:1px solid rgba(0,0,0,.125);
+    border-top:1px solid rgba(0,0,0,.125);
+    border-right:1px solid rgba(0,0,0,.125);
+    border-bottom: none
+
+}
+
+#card2-body {
+    height: 200px;
+    background-color: white;
+    background-clip: border-box;
+    border-left:1px solid rgba(0,0,0,.125);
+    border-right:1px solid rgba(0,0,0,.125);
+    border-bottom:1px solid rgba(0,0,0,.125);
+}
+
+#add-name-col2-1 ,#add-detail-col2-2 {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+} 
+.fa-icon.fa.fa-close {
+    color: #e43333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fa-icon.fa.fa-pencil {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fa-icon.fa.fa-close:hover , .fa-icon.fa.fa-pencil:hover {
+    font-size: 20px;
+}
+
+#add-button-col2-1 , #edited-button-col2-1 {
+    background-color: #87cb16;
+    color: white;
+    opacity:1;
+    padding: 7px 21px;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+
+
+}
+
+#add-button-col2-1:hover , #edited-button-col2-1:hover {
+    background-color:#7fad34
+}
+
+#add-button-col2-1:visited , #edited-button-col2-1:visited , #add-button-col2-1:active , #edited-button-col2-1:active {
+    background-color: #5e8a15
+}
+
+#edit-input1 , #edit-input2 {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding:5px 10px;
+}
+
+#saved-change {
+    background-color: #ffa534;
+    color: white;
+    opacity:1;
+    padding: 4px 10px;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+
+}
+
+#saved-change:hover {
+    background-color: #e08c23
+}
+
+#saved-change:visited , #saved-change:active {
+    background-color: #9c6015
+}
+
+#exit-edit {
+    background-color: #fa1825;
+    color: white;
+    opacity:1;
+    padding: 5px 10px;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+}
+
+#exit-edit:hover {
+    background-color: #e0323c
+}
+
+#exit-edit:visited , #exit-edit:active {
+    background-color: #ab2a33
 }

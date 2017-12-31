@@ -28,10 +28,10 @@
     -->
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="#">
+                    <a href="user_profile.html">
                             <img src="https://trumgiasi.com/wp-content/uploads/2016/08/zalo-icon.png" alt="" width="40" style="z-index: 2222; position: absolute; top: 8px;" >
                     </a>
-                    <a href="#" class="simple-text">
+                    <a href="user_profile.html" class="simple-text">
                         ZaloTools
                     </a>
                 </div>
@@ -45,13 +45,13 @@
                     <li>
                         <a class="nav-link" href="./user.html">
                             <i class="nc-icon nc-circle-09"></i>
-                            <p>TT.Người Quản Trị</p>
+                            <p>Quản Lý Nhóm</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="./table.html">
                             <i class="nc-icon nc-notes"></i>
-                            <p>Nhóm Khách Hàng</p>
+                            <p>Quản Lý Khách Hàng</p>
                         </a>
                     </li>
                     <li>
@@ -128,12 +128,7 @@
                             </li> -->
                         </ul>
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <i class="nc-icon nc-circle-09" style="padding-right: 10px;"></i>
-                                    <span class="no-icon">Account</span>
-                                </a>
-                            </li>
+                            
                             <!-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="no-icon">Dropdown</span>
@@ -186,18 +181,46 @@
                         <div class="col-md-8">
                             <div class="card ">
                                 <div class="card-header ">
-                                    <h4 class="card-title">Biểu Đồ </h4>
+                                    <h4 class="card-title">Khách Hàng Mới Nhất</h4>
                                     <p class="card-category">Cập Nhập Thường Xuyên</p>
                                 </div>
-                                <div class="card-body ">
-                                    <div id="chartHours" class="ct-chart"></div>
+                                <div class="card-body table-full-width table-responsive">
+                                        <table class="table table-hover table-striped">
+                                            <thead>
+                                                <th>STT</th>
+                                                <th>TÊN KHÁCH HÀNG</th>
+                                                <th>SĐT</th>
+                                                <th>Số Lượng Tin Nhắn Đã Gửi</th>
+                                                <th>Email</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>xxx</td>
+                                                    <td>xxxxxxxxx</td>
+                                                    <td>x</td>
+                                                    <td>xxxxxxxxxxx</td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>2</td>
+                                                    <td>xxx</td>
+                                                    <td>xxx</td>
+                                                    <td>x</td>
+                                                    <td>xxx</td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>3</td>
+                                                    <td>XXxxxx</td>
+                                                    <td>xxx</td>
+                                                    <td>x</td>
+                                                    <td>xxx</td>
+                                                </tr>
+                                         
+                                            </tbody>
+                                        </table>
                                 </div>
                                 <div class="card-footer ">
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> < 2 tháng
-                                        <i class="fa fa-circle text-danger"></i> >5 tháng
-                                        <i class="fa fa-circle text-warning"></i> > 1 năm
-                                    </div>
+                                    
                                     <hr>
                                     <div class="stats">
                                         <i class="fa fa-history"></i> Cập nhập 2 ngày trước
@@ -249,12 +272,7 @@
                                                     </td>
                                                     <td>Sign contract for "What are conference organizers afraid of?"</td>
                                                     <td class="td-actions text-right">
-                                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
-                                                            <i class="fa fa-edit"></i>
-                                                        </button>
-                                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
+                                                        
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -268,12 +286,7 @@
                                                     </td>
                                                     <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
                                                     <td class="td-actions text-right">
-                                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
-                                                            <i class="fa fa-edit"></i>
-                                                        </button>
-                                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
+                                                        
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -288,12 +301,7 @@
                                                     <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
                                                     </td>
                                                     <td class="td-actions text-right">
-                                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
-                                                            <i class="fa fa-edit"></i>
-                                                        </button>
-                                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
+                                                        
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -307,12 +315,21 @@
                                                     </td>
                                                     <td>Create 4 Invisible User Experiences you Never Knew About</td>
                                                     <td class="td-actions text-right">
-                                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
-                                                            <i class="fa fa-edit"></i>
-                                                        </button>
-                                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
+                                                        
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <label class="form-check-label">
+                                                                <input class="form-check-input" type="checkbox" value="">
+                                                                <span class="form-check-sign"></span>
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td>Read "Following makes Mediowing makes Mediowing makes Mediowing makes Mediowing makes Mediowing makes Mediowing makes Mediowing makes Mediowing makes Mediowing makes Mediowing makes Mediowing makes Mediowing makes Mediowing makes Medium better"</td>
+                                                    <td class="td-actions text-right">
+                                                        
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -326,33 +343,10 @@
                                                     </td>
                                                     <td>Read "Following makes Medium better"</td>
                                                     <td class="td-actions text-right">
-                                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
-                                                            <i class="fa fa-edit"></i>
-                                                        </button>
-                                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
+                                                        
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="form-check">
-                                                            <label class="form-check-label">
-                                                                <input class="form-check-input" type="checkbox" value="" disabled>
-                                                                <span class="form-check-sign"></span>
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                    <td>Unfollow 5 enemies from twitter</td>
-                                                    <td class="td-actions text-right">
-                                                        <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-link">
-                                                            <i class="fa fa-edit"></i>
-                                                        </button>
-                                                        <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-link">
-                                                            <i class="fa fa-times"></i>
-                                                        </button>
-                                                    </td>
-                                                </tr>
+                                                
                                             </tbody>
                                         </table>
                                     </div>
@@ -371,34 +365,13 @@
             <footer class="footer">
                 <div class="container">
                     <nav>
-                        <ul class="footer-menu">
-                            <li>
-                                <a href="#">
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Company
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Portfolio
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Blog
-                                </a>
-                            </li>
-                        </ul>
+                       
                         <p class="copyright text-center">
                             ©
                             <script>
                                 document.write(new Date().getFullYear())
                             </script>
-                            <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                            <a href="http://www.creative-tim.com">Creative Tim</a>
                         </p>
                     </nav>
                 </div>

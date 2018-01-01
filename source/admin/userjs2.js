@@ -198,14 +198,15 @@ $(document).ready(function(){
 		});
 
 		$(".fa-icon.fa.fa-remove").click(function(){
+			var f1 = $(this).closest("tr").find(".bang-id").html() - 1;
 			$(arrname).html(
 				'<a href="table.html">'
 				+
-				arr[f].name
+				arr[f1].name
 				+
 				'</i>'
 			);
-			$(arrdetail).html(arr[f].details);
+			$(arrdetail).html(arr[f1].details);
 
 			$(arricon1).html(
 				'<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
@@ -219,18 +220,19 @@ $(document).ready(function(){
 
 
 		$(".fa-icon.fa.fa-check").click(function(){
-			arr[f].name = $(".input-arrname").val();
-			arr[f].details = $(".input-arrdetail").val();
+			var f1 = $(this).closest("tr").find(".bang-id").html() - 1;
+			arr[f1].name = $(".input-arrname").val();
+			arr[f1].details = $(".input-arrdetail").val();
 			$(arrname).html(
 				'<a href="table.html">'
 				+
-				arr[f].name
+				arr[f1].name
 				+
 				'</i>'
 			);
 
 			$(arrdetail).html(
-				arr[f].details
+				arr[f1].details
 			);
 
 			$(arricon1).html(

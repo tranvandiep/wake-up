@@ -18,7 +18,7 @@ $(document).ready(function(){
 	    "details":"Chi tiết",	
 	};
 	arr[arr.length] = obj;
-	var count = 3;
+	var count = 3 , i;
 	var obj = {};
   var add1 = $("#add-name-col2-1").val();
   var add2 = $("#add-detail-col2-2").val();
@@ -29,7 +29,7 @@ $(document).ready(function(){
 	      +
 	      '<td class="bang-id">'
 	      +
-	      1
+	      arr[0].id
 	      +
 	      '</td>'
 	      + 
@@ -67,7 +67,7 @@ $(document).ready(function(){
 	      +
 	      '<td class="bang-id">'
 	      +
-	      2
+	      arr[1].id
 	      +
 	      '</td>'
 	      + 
@@ -104,7 +104,7 @@ $(document).ready(function(){
 	      +
 	      '<td class="bang-id">'
 	      +
-	      3
+	      arr[2].id
 	      +
 	      '</td>'
 	      + 
@@ -152,11 +152,14 @@ $(document).ready(function(){
   $('table').on('click', '.fa-icon.fa.fa-close', function(){
   	var a = $(this).closest("tr").find('.bang-id').html() - 1;
 	var r = confirm("Bạn có chắc muốn xóa nhóm khách hàng này chứ ?");
-    if (r == true) {
-      $(this).closest("tr").remove(); 
-      arr.splice(a , 1);
-    }
-		
+	    if (r == true) {
+	      $(this).closest("tr").remove(); 
+	      arr.splice(a , 1);
+	    }
+
+	    for(i = 0 ; i < arr.length ; i++) {
+	    	arr[i].id = i;	
+	    }
 	});
   //xoa da xong
 
@@ -220,27 +223,37 @@ $(document).ready(function(){
 
 
 		$(".fa-icon.fa.fa-check").click(function(){
-			var f1 = $(this).closest("tr").find(".bang-id").html() - 1;
-			arr[f1].name = $(".input-arrname").val();
-			arr[f1].details = $(".input-arrdetail").val();
-			$(arrname).html(
-				'<a href="table.html">'
-				+
-				arr[f1].name
-				+
-				'</i>'
-			);
+			if(!$(".input-arrname").val())
+			{
+				alert("Bạn phải nhậm tên mới");
+			} else if(!$(".input-arrdetail").val()) {
+				alert("Bạn phải nhậm chi tiết mới");
+			} else {
+				var f1 = $(this).closest("tr").find(".bang-id").html() - 1;
+				arr[f1].name = $(".input-arrname").val();
+				arr[f1].details = $(".input-arrdetail").val();
+				$(arrname).html(
+					'<a href="table.html">'
+					+
+					arr[f1].name
+					+
+					'</i>'
+				);
 
-			$(arrdetail).html(
-				arr[f1].details
-			);
+				$(arrdetail).html(
+					arr[f1].details
+				);
 
-			$(arricon1).html(
-				'<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
-			);
-			$(arricon2).html(
-				'<i class="fa-icon fa fa-close" title="Xóa"></i>'
-			);
+				$(arricon1).html(
+					'<i class="fa-icon fa fa-pencil" title="Sửa"></i>'
+				);
+				$(arricon2).html(
+					'<i class="fa-icon fa fa-close" title="Xóa"></i>'
+				);
+
+
+			}
+			
 
 		});
 	

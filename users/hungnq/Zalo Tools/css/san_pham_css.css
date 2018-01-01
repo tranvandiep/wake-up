@@ -1,6 +1,6 @@
 body {
     background: linear-gradient(#333333b0, #33333336) ,
-    url('../photo/1.jpg');
+    url('https://demo.themeisle.com/zerif-lite/wp-content/themes/zerif-lite/images/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -14,6 +14,7 @@ body {
     -webkit-background-repeat: no-repeat;
     -o-background-repeat: no-repeat;
 }
+
 #main-navbar {
 
     /*all the color changing function will be done slowly */
@@ -73,7 +74,7 @@ body {
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none;	/* Non-prefixed version, currently  supported by Chrome and Opera */
+    user-select: none;  /* Non-prefixed version, currently  supported by Chrome and Opera */
     /*not allow user to hightlight the text*/
 
 }
@@ -232,3 +233,47 @@ body {
 #test .fa {
     color: #2D9BEA;
 }
+
+/*Prallax*/
+
+.divider {
+    height:50px;
+}
+
+section {
+    height:500px;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:auto;
+}
+
+.bg-1 {
+    background: url('https://www.bootply.com/assets/example/bg_blueplane.jpg') no-repeat center center fixed;
+    color:#fff;
+    background-size:cover;
+}
+  
+.bg-2 {
+    background: url('https://www.bootply.com/assets/example/bg_suburb.jpg') no-repeat top center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-3 {
+    background: url('https://www.bootply.com/assets/example/bg_blueplane.jpg') no-repeat bottom center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+/*#footer {
+    height: 60px;
+    background-color:#585858;
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+}*/
+
+#footer a {
+  color:#efefef;
+}
+

@@ -21,7 +21,7 @@ $(document).ready(function(){
 	for(i = 0 ; i < arr.length ; i++) {
 		arr[i].id = i;
 	}
-	var i, idx = 1;
+	var count = 0 , i , idx = 1;
 	var obj = {};
   var add1 = $("#add-name-col2-1").val();
   var add2 = $("#add-detail-col2-2").val();
@@ -289,7 +289,7 @@ $(document).ready(function(){
   //check da xong
   $("#add-form").submit(function(e){
   		e.preventDefault();
-  		var count;
+  		count = count + 1;
 	    $("#add-point").append(
 	      '<tr>'
 	      +

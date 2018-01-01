@@ -18,7 +18,10 @@ $(document).ready(function(){
 	    "details":"Chi tiết",	
 	};
 	arr[arr.length] = obj;
-	var count = 3 , i;
+	for(i = 0 ; i < arr.length ; i++) {
+		arr[i].id = i;
+	}
+	var i, idx = 1;
 	var obj = {};
   var add1 = $("#add-name-col2-1").val();
   var add2 = $("#add-detail-col2-2").val();
@@ -153,12 +156,12 @@ $(document).ready(function(){
   	var a = $(this).closest("tr").find('.bang-id').html() - 1;
 	var r = confirm("Bạn có chắc muốn xóa nhóm khách hàng này chứ ?");
 	    if (r == true) {
-	      $(this).closest("tr").remove(); 
-	      arr.splice(a , 1);
-	    }
+			$(this).closest("tr").remove(); 
+			arr.splice(a , 1);
 
-	    for(i = 0 ; i < arr.length ; i++) {
-	    	arr[i].id = i;	
+			$("tr").each(function(){
+				$(this).find(".bang-id").html($(this).index() + 1);
+			});
 	    }
 	});
   //xoa da xong
@@ -230,6 +233,10 @@ $(document).ready(function(){
 				alert("Bạn phải nhậm chi tiết mới");
 			} else {
 				var f1 = $(this).closest("tr").find(".bang-id").html() - 1;
+				//arr.name tai vi tri thu f1 , khong phai arr.name tai id = f1
+				/*neu stt thu 2 bi xoa thi stt se la 1 - 3 - 4 va tri tri mang se la 0-1-2 
+				vay khi stt 4 -1 = 3 , ma trong khi do trong mang lai khong co v.tri thu 3 nen 
+				no se khong tim thay vi tri cuar $('.bang-id').html() -1*/
 				arr[f1].name = $(".input-arrname").val();
 				arr[f1].details = $(".input-arrdetail").val();
 				$(arrname).html(
@@ -282,13 +289,11 @@ $(document).ready(function(){
   //check da xong
   $("#add-form").submit(function(e){
   		e.preventDefault();
-	    count = count + 1;
+  		var count;
 	    $("#add-point").append(
 	      '<tr>'
 	      +
 	      '<td class="bang-id">'
-	      +
-	      count
 	      +
 	      '</td>'
 	      + 
@@ -323,17 +328,25 @@ $(document).ready(function(){
 	      '</tr>'
 	    );
 
-	    obj = {
-	    "id":count,
-	    "name":$("#add-name-col2-1").val(),
-	    "details":$("#add-detail-col2-2").val(),
+		$("tr").each(function(){
+			$(this).find(".bang-id").html($(this).index() + 1);
+		});
+
+		 obj = {
+		    "id":count,
+		    "name":$("#add-name-col2-1").val(),
+		    "details":$("#add-detail-col2-2").val(),
 	    };
+
+	   
 
 	    arr.push(obj);
 	    console.log(arr);
 	    $("#add-name-col2-1").val("");
 	    $("#add-detail-col2-2").val("");
 	});
+
+
 
 
 /*  $('table').on('click', '.fa-icon.fa.fa-close', function(){

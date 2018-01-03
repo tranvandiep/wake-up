@@ -1,6 +1,5 @@
 body {
-    background: linear-gradient(#333333b0, #33333336) ,
-    url('../photo/1.jpg');
+    background: url('../photo/6.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -13,6 +12,10 @@ body {
     -moz-background-repeat: no-repeat;
     -webkit-background-repeat: no-repeat;
     -o-background-repeat: no-repeat;
+}
+
+.header-content h1 {
+    font-weight: bold;
 }
 
 #main-navbar {

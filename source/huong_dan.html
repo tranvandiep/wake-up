@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng Kí Zalo Tools</title>
+    <title>Trang Chủ| Zalo Tools</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -11,12 +11,12 @@
     <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
     <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/timeline_css.css">
     <link rel="stylesheet" href="css/san_pham_css.css">
-    <link rel="stylesheet" href="css/dang_ki_css.css">
 </head>
 <body>
-<span id="trang_chu"></span>
-<div class="container-fluid" id="header-wrapper">
+<span id="huong-dan"></span>
+<div class="container-fluid" id="header-wrapper" style="background: transparent;">
     <nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -32,7 +32,7 @@
                     <li><a href="san_pham_page.html">TÍNH NĂNG</a></li>
                     <li><a href="san_pham_page.html">BẢNG GIÁ</a></li>
                     <li><a href="san_pham_page.html">HỖ TRỢ</a></li>
-                    <li><a href="huong_dan.html" class="cool-link">HƯỚNG DẪN</a></li>
+                    <li><a href="#huong-dan" class="cool-link">HƯỚNG DẪN</a></li>
                     <li><a href="#dang_nhap" id="last-menu" data-toggle="modal" data-target="#myModal">ĐĂNG NHẬP</a></li>
                 </ul>
             </div>
@@ -41,6 +41,7 @@
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog" style="width: 35%">
+
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header" style="border-bottom-color: #1DC7EA">
@@ -62,6 +63,10 @@
                     </form>
                     <br/>
                     <br/>
+                    <p style="text-align: center">hoặc</p>
+                    <a href="dang_ki.html" class="btn btn-info" style="width: 100%">Tạo tài khoản mới</a>
+                    <br/>
+                    <br/>
                     <p style="text-align: center"><a href="#">Quên mật khẩu</a></p>
                     <br/>
                 </div>
@@ -71,30 +76,24 @@
 
 
     <div class="header-content">
-        <h1 id="header-h1" class="wow fadeInLeft" data-wow-delay="0.1s">LIÊN HỆ ZALO TOOLS</h1>
-        <h1 class="divider-1 wow fadeInLeft" data-wow-delay="0.2s"><span></span></h1><br>
-        <p class="wow fadeInLeft" data-wow-delay="0.3s">Hoặc gọi ngay: .............</p><br>
-        <div id="form-reg">
-            <form>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="usr" placeholder="Tên tài khoản">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" placeholder="Nhập lại mật khẩu">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="pnb" placeholder="Số điện thoại">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="ema" placeholder="Email">
-                </div>
-                <br/>
-                <button type="submit" class="btn btn-info">Đăng kí dùng Zalo Tools</button>
-            </form>
-        </div>
+        <br/><br/><br/><br/><br/>
+        <h1 id="header-h1" class="wow fadeInDown" data-wow-delay="0.1s">THẤU HIỂU KHÁCH HÀNG VÀ TĂNG DOANH SỐ </h1>
+        <h1 class="wow fadeInDown" data-wow-delay="0.2s">CHỈ TỪ 99K/THÁNG</h1><br>
+        <p class="wow fadeInUp" data-wow-delay="0.3s">Giải pháp chăm sóc khách hàng qua Zalo Tools dành cho nhà hàng, cafe, bar/pub</p><br>
+        <a href="dang_ki.html"><button type="button" class="btn btn-info wow fadeInLeft" id="btn1" data-wow-delay="0.4s" >Tôi muốn dùng thử Zalo Tools</button></a>
+    </div>
+</div>
+
+
+
+<br><br/>
+<span></span>
+<div class="container-fluid" style="color: #474545; background-color: white; height: 800px;" id="function">
+    <div class="row row-center">
+        <strong style="font-size: 50px;" data-wow-delay="0.2s" class="wow fadeIn">HƯỚNG DẪN</strong><br/><br/>
+        <p data-wow-delay="0.2s" class="divider-1 wow fadeInUp">
+            <span></span>
+        </p>
     </div>
 </div>
 
@@ -111,5 +110,5 @@
 </div>
 
 </body>
-<script src="js/dang_ki_js.js"></script>
+<script src="js/san_pham_js.js"></script>
 </html>

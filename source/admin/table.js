@@ -60,43 +60,61 @@ $(document).ready(function(){
     });
      
         $("#hide").hide();
-        $("#an").hide();
+       
+       
+ 
         
     });
    
-        var app=angular.module('myApp', ['ui.bootstrap','ui.utils']);
-            app.controller('myCtrl',function($scope){
-            $scope.data=
-            [
-                ['Trần Xuân Bách', '0987654321',  '', ''],
-                ['Trần Văn Điệp', '0987654321',  '', ''],
-                ['Đỗ Thế Hùng', '0987654321', '', ''],
-                ['Vũ Quốc Hưng', '0987654321', '', ''],
-                ['Quang Hưng', '0987654321', '', ''],
-                ['Trần Xuân Bách', '0987654321',  '', ''],
-                ['Trần Văn Điệp', '0987654321',  '', ''],
-                ['Đỗ Thế Hùng', '0987654321', '', ''],
-                ['Vũ Quốc Hưng', '0987654321', '', ''],
-                ['Quang Hưng', '0987654321', '', ''],
-                ['Trần Xuân Bách', '0987654321',  '', ''],
-                ['Trần Văn Điệp', '0987654321',  '', ''],
-                ['Đỗ Thế Hùng', '0987654321', '', ''],
-                ['Vũ Quốc Hưng', '0987654321', '', ''],
-                ['Quang Hưng', '0987654321', '', ''],
-                ['Trần Xuân Bách', '0987654321',  '', ''],
-                ['Trần Văn Điệp', '0987654321',  '', ''],
-                ['Đỗ Thế Hùng', '0987654321', '', ''],
-                ['Vũ Quốc Hưng', '0987654321', '', ''],
-                ['Quang Hưng', '0987654321', '', ''],
-                ['Trần Xuân Bách', '0987654321',  '', ''],
-                ['Trần Văn Điệp', '0987654321',  '', ''],
-                ['Đỗ Thế Hùng', '0987654321', '', ''],
-                ['Vũ Quốc Hưng', '0987654321', '', ''],
-                ['Quang Hưng', '0987654321', '', '']
-            ]
+   
 
-            $scope.dataTableOpt = {
 
-                "aLengthMenu": [[20, 50, 100,-1], [20, 50, 100,'All']],
-            };
-        });
+
+
+var app = angular.module('myApp', ['angularUtils.directives.dirPagination']);
+
+    app.controller('myCtrl', function($scope, $http) {
+        $scope.data = [
+            {"idkhachhang" :'1',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'2',"idnhomkhachhang" : '1',"ten" : 'Trần Văn Điệp', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'3',"idnhomkhachhang" : '2',"ten" : 'Nguyễn Quang Hưng', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'4',"idnhomkhachhang" : '1',"ten" : 'Vũ Hưng', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'5',"idnhomkhachhang" : '3',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'6',"idnhomkhachhang" : '3',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'7',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'8',"idnhomkhachhang" : '2',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'9',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'10',"idnhomkhachhang" : '2',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'11',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'12',"idnhomkhachhang" : '2',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'13',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'14',"idnhomkhachhang" : '3',"ten" : 'Đỗ Thế Hùng', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'8',"idnhomkhachhang" : '2',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'9',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'10',"idnhomkhachhang" : '2',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'11',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'12',"idnhomkhachhang" : '2',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'13',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'14',"idnhomkhachhang" : '3',"ten" : 'Đỗ Thế Hùng', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},            
+            {"idkhachhang" :'8',"idnhomkhachhang" : '2',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'9',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'10',"idnhomkhachhang" : '2',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'11',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'12',"idnhomkhachhang" : '2',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'13',"idnhomkhachhang" : '1',"ten" : 'Trần Xuân Bách', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+            {"idkhachhang" :'14',"idnhomkhachhang" : '3',"ten" : 'Đỗ Thế Hùng', "sdt" : '0987654321', "ngaysinh" : '02-07-1999',"diachi" : 'hanoi', "email" : 'abc@gmail.com', "facebook": 'abc', "skype" : 'zxc', "soluongtn" : '', "ngayguitn" : ''},
+        ];
+
+        
+        $scope.sort = function(keyname){
+        $scope.sortKey = keyname;   
+        $scope.reverse = !$scope.reverse; 
+        }
+
+        $scope.serial = 1;
+        $scope.indexCount = function(newPageNumber){
+            $scope.serial = newPageNumber * 10 - 9;
+        }
+        
+    });
+

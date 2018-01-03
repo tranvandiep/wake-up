@@ -38,11 +38,7 @@ $(document).ready(function(){
 	      + 
 	      '<td class="arrname">'
 	      +
-	      '<a href="table.html">'
-	      +
 	      arr[0].name
-	      +
-	      '</i>'
 	      +
 	      '</td>'
 	      + 
@@ -76,11 +72,7 @@ $(document).ready(function(){
 	      + 
 	      '<td class="arrname">'
 	      +
-	      '<a href="#">'
-	      +
 	      arr[1].name
-	      +
-	      '</i>'
 	      +
 	      '</td>'
 	      + 
@@ -113,11 +105,7 @@ $(document).ready(function(){
 	      + 
 	      '<td class="arrname">'
 	      +
-	      '<a href="#">'
-	      +
 	      arr[2].name
-	      +
-	      '</i>'
 	      +
 	      '</td>'
 	      + 
@@ -211,11 +199,7 @@ $(document).ready(function(){
 		$(".fa-icon.fa.fa-remove").click(function(){
 			var f1 = $(this).closest("tr").find(".bang-id").html() - 1;
 			$(arrname).html(
-				'<a href="table.html">'
-				+
 				arr[f1].name
-				+
-				'</i>'
 			);
 			$(arrdetail).html(arr[f1].details);
 
@@ -245,11 +229,9 @@ $(document).ready(function(){
 				vay khi stt 4 -1 = 3 , ma trong khi do trong mang lai khong co v.tri thu 3 nen 
 				no se khong tim thay vi tri cuar $('.bang-id').html() -1*/
 				$(arrname).html(
-					'<a href="table.html">'
-					+
+
 					arr[f1].name
-					+
-					'</i>'
+
 				);
 				$(arrdetail).html(
 					cdf
@@ -288,11 +270,7 @@ $(document).ready(function(){
 	      + 
 	      '<td class="arrname">'
 	      +
-	      '<a href="table.html">'
-	      +
 	      $("#add-name-col2-1").val()
-	      +
-	      '</i>'
 	      +
 	      '</td>'
 	      + 

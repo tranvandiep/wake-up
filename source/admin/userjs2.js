@@ -76,7 +76,7 @@ $(document).ready(function(){
 	      + 
 	      '<td class="arrname">'
 	      +
-	      '<a href="table.html">'
+	      '<a href="#">'
 	      +
 	      arr[1].name
 	      +
@@ -113,7 +113,7 @@ $(document).ready(function(){
 	      + 
 	      '<td class="arrname">'
 	      +
-	      '<a href="table.html">'
+	      '<a href="#">'
 	      +
 	      arr[2].name
 	      +

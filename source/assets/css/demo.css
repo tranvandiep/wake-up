@@ -896,6 +896,13 @@
     color: #e43333;
     font-weight: bold;
     cursor: pointer;
+    margin-top: 10%
+}
+
+@media screen and (max-width: 539px) {
+    .fa-icon.fa.fa-close {
+        margin-top: 80%;
+    }
 }
 
 .fa-icon.fa.fa-pencil {

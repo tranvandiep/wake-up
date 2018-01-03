@@ -860,7 +860,7 @@
 }
 
 .card-title {
-    margin-top: 5px
+    margin-top: 8px
 }
 
 #table-header {
@@ -927,7 +927,7 @@
     background-color: #5e8a15
 }
 
-#edit-input1 , #edit-input2 , .edit1 , .edit2{
+#edit-input1 , #edit-input2 , .edit1 , .edit2 , .input-arrname , .input-arrdetail{
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;

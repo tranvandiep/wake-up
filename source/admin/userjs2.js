@@ -21,7 +21,7 @@ $(document).ready(function(){
 	for(i = 0 ; i < arr.length ; i++) {
 		arr[i].id = i;
 	}
-	var count = 0 , i , idx = 1;
+	var count = 2 , i , idx = 1;
 	var obj = {};
   var add1 = $("#add-name-col2-1").val();
   var add2 = $("#add-detail-col2-2").val();
@@ -32,7 +32,7 @@ $(document).ready(function(){
 	      +
 	      '<td class="bang-id">'
 	      +
-	      arr[0].id
+	      1
 	      +
 	      '</td>'
 	      + 
@@ -70,7 +70,7 @@ $(document).ready(function(){
 	      +
 	      '<td class="bang-id">'
 	      +
-	      arr[1].id
+	      2
 	      +
 	      '</td>'
 	      + 
@@ -107,7 +107,7 @@ $(document).ready(function(){
 	      +
 	      '<td class="bang-id">'
 	      +
-	      arr[2].id
+	      3
 	      +
 	      '</td>'
 	      + 
@@ -175,11 +175,11 @@ $(document).ready(function(){
 		var arricon1 = $(a).find(".arricon1");
 		var arricon2 = $(a).find(".arricon2");
 		$(arrname).html(
-			'<input type="text" class="input-arrname" placeholder="Tên mới">'
+			'<input type="text" class="form-control input-arrname" placeholder="Tên mới">'
 		);
 
 		$(arrdetail).html(
-			'<input type="text" class="input-arrdetail" placeholder="Chi tiết mới">'
+			'<input type="text" class="form-control input-arrdetail" placeholder="Chi tiết mới">'
 		);
 		$(arricon1).html(
 			'<i class="fa-icon fa fa-check" title="Lưu"></i>'
@@ -192,7 +192,7 @@ $(document).ready(function(){
 		});
 
 		$(arricon2).html(
-			'<i class="fa-icon fa fa-remove" title="Thoát" style="margin-top:5px"></i>'
+			'<i class="fa-icon fa fa-remove" title="Thoát" style="margin-top:10px"></i>'
 		);
 
 		$(".fa-icon.fa.fa-remove").css("color" ,"#e43333");

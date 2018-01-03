@@ -1,18 +1,13 @@
-$(document).ready(function(){
-   var count = 0;
-   $(window).scroll(function(e1){
-	    if($(this).scrollTop() > 200 ) {
-	        $('#main-navbar').css("background-color", "#474545");
-	    	} else {
-	                $('#main-navbar').css("background-color", "transparent");
-	        
-	            }
-	});
+if(!$(".input-arrname").val())
+{	var f1 = $(this).closest("tr").find(".bang-id").html() - 1;
+	$(arrname).html(
+	arr[f1].name
+	)
+)
 
-   	$('#toggle-nav-button').click(function(){
-   		$('#main-navbar').css("background-color", "#474545");
+			if(!$(".input-arrdetail").val())
+			{	var f1 = $(this).closest("tr").find(".bang-id").html() - 1;
+				$(arrdetail).html(arr[f1].details);
 
-   });
-
-
-});
+			} 
+			if(!$(".input-arrname").val() && !$(".input-arrdetail").val()) {

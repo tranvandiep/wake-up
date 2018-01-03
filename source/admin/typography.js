@@ -2,20 +2,20 @@ $(document).ready(function(){
 	var arr = [];
 	var obj = {
 		"id":1,
-	    "name":"Nhóm VIP",
-	    "details":"Chi Tiết",	
+	    "name":"Tin Nhắn 1",
+	    "details":"Nội Dung",	
 	};
 	arr[arr.length] = obj;
 	var obj = {
 		"id":2,
-	    "name":"Nhóm Thường Xuyên Sử Dụng",
-	    "details":"Chi Tiết",	
+	    "name":"Tin Nhắn 2",
+	    "details":"Nội Dung",	
 	};
 	arr[arr.length] = obj;
 	var obj = {
 		"id":3,
-	    "name":"nhóm Mới Sử Dụng",
-	    "details":"Chi Tiết",	
+	    "name":"Tin Nhắn 3",
+	    "details":"Nội Dung",	
 	};
 	arr[arr.length] = obj;
 	for(i = 0 ; i < arr.length ; i++) {

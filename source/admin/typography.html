@@ -1,24 +1,27 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="zalo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Light Bootstrap Dashboard - Free Bootstrap 4 Admin Dashboard by Creative Tim</title>
+    <title>Quản Lý Tin Nhắn|Zalo Tools</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <!-- CSS Files -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.1" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/css/demo.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="typography.js"></script>
+   
 </head>
 
-<body>
+<body ng-controller="myCtrl">
     <div class="wrapper">
         <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
             <!--
@@ -28,36 +31,39 @@
     -->
             <div class="sidebar-wrapper">
                 <div class="logo">
-                    <a href="http://www.creative-tim.com" class="simple-text">
-                        ZALOTOOLS
+                    <a href="user_profile.html">
+                        <img src="https://trumgiasi.com/wp-content/uploads/2016/08/zalo-icon.png" alt="" width="40" style="z-index: 2222; position: absolute; top: 8px;" >
+                    </a>
+
+                    <a href="user_profile.html" class="simple-text">
+                        ZaloTools
                     </a>
                 </div>
                 <ul class="nav">
                     <li>
                         <a class="nav-link" href="dashboard.html">
                             <i class="nc-icon nc-chart-pie-35"></i>
-                            <p>tổng quan</p>
+                            <p>Tổng Quan</p>
                         </a>
                     </li>
-                    <li>
-                        <a class="nav-link" href="./user.html">
+                    <li class="nav-item">
+                        <a class="nav-link" href="user.html">
                             <i class="nc-icon nc-circle-09"></i>
-                            <p>tt.người quản trị</p>
+                            <p>Quản Lý Nhóm</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="./table.html">
                             <i class="nc-icon nc-notes"></i>
-                            <p>nhóm khách hàng</p>
+                            <p>Quản lý khách hàng</p>
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li  class="nav-item active">
                         <a class="nav-link" href="./typography.html">
                             <i class="nc-icon nc-paper-2"></i>
-                            <p>thư viện tin nhắn</p>
+                            <p>Quản Lý Tin Nhắn</p>
                         </a>
                     </li>
-                   
                 </ul>
             </div>
         </div>
@@ -65,8 +71,8 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class=" container-fluid  ">
-                <i class="nc-icon nc-single-copy-04" style="padding-right: 10px;"></i>
-                    <a class="navbar-brand" href="#pablo"> Thư Viện </a>
+                    <i class="nc-icon nc-paper-2" style="padding-right: 10px;"></i>
+                    <a class="navbar-brand" href="typography.html">Quản Lý Tin Nhắn</a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar burger-lines"></span>
                         <span class="navbar-toggler-bar burger-lines"></span>
@@ -74,13 +80,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <i class="nc-icon nc-circle-09" style="padding-right: 10px;"></i>
-                                    <span class="no-icon">Account</span>
-                                </a>
-                            </li>
+                        <ul class="navbar-nav ml-auto">                           
                             <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
                                     <i class="nc-icon nc-button-power" style="padding-right: 10px;"></i>
@@ -92,109 +92,70 @@
                 </div>
             </nav>
             <!-- End Navbar -->
+
+            <!--page content-->
             <div class="content">
                 <div class="container-fluid">
+                    <!--row-->
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title">Light Bootstrap Table Heading</h4>
-                                    <p class="card-category">Created using Montserrat Font Family</p>
+                        <!--col no1-->
+                        <div class="col-md-8">
+                            <!--table triped-table-width-hover-->
+                            <div class="card strpied-tabled-with-hover">
+                                <div class="card-header" id="table-header">
+                                    <div class="col-md-5" style="padding: 4px 0 0 0;float: left">
+                                        <h4 class="card-title">Danh Sách Tin Nhắn</h4>        
+                                    </div>
+
+                                    <div class="col-md-7" style="padding: 0;float: left;text-align: center;">
+                                        <input type="text" class="form-control" id="search-input" placeholder="Tìm Kiếm" name="search" >
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="typography-line">
-                                        <h1>
-                                            <span>Header 1</span>The Life of LB Dashboard </h1>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h2>
-                                            <span>Header 2</span>The Life of Light Bootstrap Dashboard </h2>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h3>
-                                            <span>Header 3</span>The Life of Light Bootstrap Dashboard </h3>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h4>
-                                            <span>Header 4</span>The Life of Light Bootstrap Dashboard </h4>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h5>
-                                            <span>Header 5</span>The Life of Light Bootstrap Dashboard </h5>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h6>
-                                            <span>Header 6</span>The Life of Light Bootstrap Dashboard </h6>
-                                    </div>
-                                    <div class="typography-line">
-                                        <p>
-                                            <span>Paragraph</span>
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at.
-                                        </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Quote</span>
-                                        <blockquote>
-                                            <p class="blockquote blockquote-primary">
-                                                "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
-                                                <br>
-                                                <br>
-                                                <small>
-                                                    - Noaa
-                                                </small>
-                                            </p>
-                                        </blockquote>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Muted Text</span>
-                                        <p class="text-muted">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                                        </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Primary Text</span>
-                                        <p class="text-primary">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...</p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Info Text</span>
-                                        <p class="text-info">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Success Text</span>
-                                        <p class="text-success">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Warning Text</span>
-                                        <p class="text-warning">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers...
-                                        </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <span>Danger Text</span>
-                                        <p class="text-danger">
-                                            I will be the leader of a company that ends up being worth billions of dollars, because I got the answers... </p>
-                                    </div>
-                                    <div class="typography-line">
-                                        <h2>
-                                            <span>Small Tag</span>
-                                            Header with small subtitle
-                                            <br>
-                                            <small>Use "small" tag for the headers</small>
-                                        </h2>
-                                    </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-striped" id="nhom-table" >
+                                        <thead>
+                                            <th>STT</th>
+                                            <th>Tiêu Đề</th>
+                                            <th>Nội Dung</th>
+                                        </thead>
+                                        <tbody id="add-point">
+                                           
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
+                             <!--table triped-table-width-hover-->
                         </div>
+                        <!--col no1-->
+
+                        <!--col-no2-->
+                        <div class="col-md-4" id="col-no2" style="border-radius: 4px">
+                            <div class="card-header" id="card2-header">    
+                                <h4 class="card-title">Thêm Tin Nhắn Mới</h4>    
+                            </div>
+
+                             <div class="card-body" id="card2-body"> 
+                             <form action="/action_page.php" id="add-form">                             
+                                <input type="text" required class="form-control" id="add-name-col2-1" placeholder="Tiêu Đề" style="margin-bottom: 10px">
+                                <textarea type="text" required class="form-control" id="add-detail-col2-2" placeholder="Nội Dung" style="margin-bottom: 10px"></textarea>
+                                <button type="submit" id="add-button-col2-1"><i class="fa-icon  fa fa-plus-circle"></i>&nbsp;Thêm</button>
+                            </form>
+                            </div>
+                        </div>
+                        <!--col-no2-->
                     </div>
+                    <!--end row-->
                 </div>
             </div>
+            <!--page content-->
+
+
             <footer class="footer">
                 <div class="container">
                     <nav>
-                        <ul class="footer-menu">
+
+                    <!--footer menu-->
+                    <!--<ul class="footer-menu">
                             <li>
                                 <a href="#">
                                     Home
@@ -215,13 +176,14 @@
                                     Blog
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
+                        <!--footer menu-->
                         <p class="copyright text-center">
                             ©
                             <script>
                                 document.write(new Date().getFullYear())
                             </script>
-                            <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                            <a href="https://ziczacgroup.com/">ZicZacGroup</a>
                         </p>
                     </nav>
                 </div>
@@ -229,14 +191,16 @@
         </div>
     </div>
     <!--   -->
-    <!-- <div class="fixed-plugin">
+
+<!--fixed setting icon--> 
+ <!--    <div class="fixed-plugin">
     <div class="dropdown show-dropdown">
         <a href="#" data-toggle="dropdown">
             <i class="fa fa-cog fa-2x"> </i>
         </a>
 
         <ul class="dropdown-menu">
-			<li class="header-title"> Sidebar Style</li>
+            <li class="header-title"> Sidebar Style</li>
             <li class="adjustments-line">
                 <a href="javascript:void(0)" class="switch-trigger">
                     <p>Background Image</p>
@@ -300,29 +264,19 @@
             <li class="header-title" id="sharrreTitle">Thank you for sharing!</li>
 
             <li class="button-container">
-				<button id="twitter" class="btn btn-social btn-outline btn-twitter btn-round sharrre"><i class="fa fa-twitter"></i> · 256</button>
+                <button id="twitter" class="btn btn-social btn-outline btn-twitter btn-round sharrre"><i class="fa fa-twitter"></i> · 256</button>
                 <button id="facebook" class="btn btn-social btn-outline btn-facebook btn-round sharrre"><i class="fa fa-facebook-square"></i> · 426</button>
             </li>
         </ul>
     </div>
-</div>
- -->
+</div> -->
+<!--fixed setting icon--> 
+
+
+
 </body>
-<!--   Core JS Files   -->
-<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-<script src="../assets/js/plugins/bootstrap-switch.js"></script>
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-<!--  Chartist Plugin  -->
-<script src="../assets/js/plugins/chartist.min.js"></script>
-<!--  Notifications Plugin    -->
-<script src="../assets/js/plugins/bootstrap-notify.js"></script>
-<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
 <script src="../assets/js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
-<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
-<script src="../assets/js/demo.js"></script>
 
 </html>
+
+

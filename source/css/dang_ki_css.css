@@ -189,7 +189,38 @@
     color: white;
 }
 
-#form-reg {
+#form-reg, #form-log_in {
     width: 25%;
     margin: auto;
 }
+
+#form-log_in label{
+    float: left;
+}
+
+#form-log_in input{
+    height: 45px;
+}
+
+#form-log_in button, #form-reg button{
+    padding: 12px;
+    width: 100%;
+    font-size: 15px;
+}
+
+._1rf5 {
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 10.5%;
+    margin-top: 10px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%
+}
+
+._1rf5>span{display:inline-block;position:relative}
+._1rf5>span:before,
+._1rf5>span:after{background:#ced0d4;content:"";height:1px;position:absolute;top:50%;width:9999px}
+._1rf5>span:before{margin-right:15px;right:100%}
+._1rf5>span:after{left:100%;margin-left:15px}

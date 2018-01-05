@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Đăng Kí Zalo Tools</title>
+    <title>Đăng Nhập Zalo Tools</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -33,35 +33,34 @@
                     <li><a href="san_pham_page.html">BẢNG GIÁ</a></li>
                     <li><a href="san_pham_page.html">HỖ TRỢ</a></li>
                     <li><a href="huong_dan.html" class="cool-link">HƯỚNG DẪN</a></li>
-                    <li><a href="dang_nhap.html" id="last-menu">ĐĂNG NHẬP</a></li>
+                    <li class="active"><a href="dang_nhap.html" id="last-menu">ĐĂNG NHẬP</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
     <div class="header-content" style="padding-bottom: 30px;">
-        <h1 id="header-h1" class="wow fadeInLeft" data-wow-delay="0.1s">LIÊN HỆ ZALO TOOLS</h1>
-        <h1 class="divider-1 wow fadeInLeft" data-wow-delay="0.2s"><span></span></h1><br>
-        <p class="wow fadeInLeft" data-wow-delay="0.3s">Hoặc gọi ngay: .............</p><br>
-        <div id="form-reg">
+        <div class="container-fluid wow fadeInLeft">           
+            <img src="photo/logo-zalo-1.png" width="20%"/>
+        </div><br><br>
+        <div id="form-log_in">
             <form>
+                <label for="usr">Tên đăng nhập:</label>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="usr" placeholder="Tên tài khoản">
+                    <input type="text" class="form-control" id="usr" placeholder="Nhập tài khoản, Email hoặc Số điện thoại">
                 </div>
+                <label for="pwd">Mật khẩu:</label>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" placeholder="Mật khẩu">
+                    <input type="password" class="form-control" id="pwd" placeholder="Nhập mật khẩu">
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" placeholder="Nhập lại mật khẩu">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="pnb" placeholder="Số điện thoại">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="ema" placeholder="Email">
-                </div>
-                <button type="submit" class="btn btn-info" style="width: 40%">Đăng kí</button>
+                <br/>
+                <button type="submit" class="btn btn-info">Đăng nhập</button>
             </form>
+                <div class="_1rf5"><span>hoặc</span></div>
+                <br>
+                 <a href="dang_ki.html" ><button type="submit" class="btn btn-success" style="width: 50%;margin: auto;">Tạo tài khoản mới</button></a><br/><br/>
+                 <p style="text-align: center"><a href="#" style="font-size: 14px; color: white;margin: auto">Quên mật khẩu</a></p>
         </div>
     </div>
 </div>

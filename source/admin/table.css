@@ -1,4 +1,4 @@
-.table-wrapper {
+    .table-wrapper {
         width: 700px;
         margin: 30px auto;
         background: #fff;
@@ -44,26 +44,26 @@
         cursor: pointer;
         display: inline-block;
         margin: 0 5px;
-        min-width: 24px;
+        min-width: 25px;
     }    
     table.table td a.add {
-        color: #27C46B;
+        color: black;
+        margin-right: -1px;
+        position: relative;
+        top: 0px;
     }
     table.table td a.edit {
-        color: #FFC107;
+        color: black;
     }
     table.table td a.delete {
         color: #E34724;
+          margin-top: -4px; 
     }
     table.table td i {
-        font-size: 19px;
+        font-size: 18px;
+
     }
-    table.table td a.add i {
-        font-size: 24px;
-        margin-right: -1px;
-        position: relative;
-        top: 3px;
-    }    
+
     table.table .form-control {
         height: 32px;
         line-height: 32px;
